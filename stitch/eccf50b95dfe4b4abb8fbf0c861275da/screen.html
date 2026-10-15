@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#dfe2ef","on-tertiary-fixed-variant":"#881c2c","on-primary":"#2a039d","surface-container-lowest":"#0a0e17","surface-bright":"#353943","primary":"#c7bfff","on-secondary":"#003822","on-secondary-fixed":"#002112","surface":"#0f131c","inverse-on-surface":"#2c303a","background":"#0f131c","on-error":"#690005","on-background":"#dfe2ef","on-error-container":"#ffdad6","surface-container-low":"#181c25","secondary":"#51de9d","surface-dim":"#0f131c","surface-container":"#1c2029","surface-variant":"#31353f","error":"#ffb4ab","primary-fixed-dim":"#c7bfff","tertiary-fixed":"#ffdada","on-tertiary-container":"#5b0014","outline":"#928f9f","inverse-primary":"#5a49cb","surface-container-highest":"#31353f","tertiary":"#ffb3b5","on-secondary-fixed-variant":"#005234","surface-tint":"#c7bfff","error-container":"#93000a","tertiary-container":"#ea6670","tertiary-fixed-dim":"#ffb3b5","on-primary-fixed":"#170065","surface-container-high":"#262a33","secondary-fixed":"#71fcb8","primary-container":"#8e7fff","inverse-surface":"#dfe2ef","on-secondary-container":"#003b24","on-tertiary-fixed":"#40000b","primary-fixed":"#e4dfff","on-tertiary":"#680018","on-primary-fixed-variant":"#422db2","outline-variant":"#474554","on-primary-container":"#24008c","on-surface-variant":"#c8c4d6","secondary-fixed-dim":"#51de9d","secondary-container":"#00b175"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","margin":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","gutter-desktop":"1.25rem","margin-tablet":"1.5rem","space-lg":"1rem","space-md":"0.75rem","gutter":"1rem","margin-desktop":"2rem"},fontFamily:{"headline-lg":["Inter"],"metric-display":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-xl-mobile":["Inter"],"body-md":["Inter"],"data-mono":["JetBrains Mono"],"headline-xl":["Inter"],"headline-sm":["Inter"],"label-caps":["Inter"]},fontSize:{"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"metric-display":["1.75rem",{"lineHeight":"2rem","letterSpacing":"-0.03em","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.01em","fontWeight":"400"}],"headline-xl-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0","fontWeight":"400"}],"data-mono":["0.8125rem",{"lineHeight":"1.125rem","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"600"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.06em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant/20 shrink-0"><img alt="TradeFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XT14wmwir-16iJY6uGQbqpQ9GRWdUPnk8rP5DkBygiVc5Qew3tg1A8MFFgzdjtgOg8h3zBBpE2L8CFZY1hevUnyrt2TDHo-wluqXco-oA8YtAm1rlNLDs_k2BfW0uXUqrunla0sPKgUS_Ec8vxs-h_yV7E1i0AN_tIDyahT8K8AoVK7AjAaHQzUDKH7ZI0RzUPnzPoLLsbmJtyRF4LtKd-edGgtFWF2GlPTKhSsm5-qmdQ-XfzsMAQrnc"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TradeFlow</span></div><div class="p-space-sm shrink-0"><div class="p-space-sm bg-surface-container-low rounded-lg border border-outline-variant/30 cursor-pointer hover:border-outline/50 transition-colors"><div class="flex items-center justify-between mb-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-body-sm text-body-sm text-on-surface truncate font-semibold">Apex 100k Funded</span></div><span class="material-symbols-outlined text-body-sm text-on-surface-variant">unfold_more</span></div><div class="flex items-center justify-between text-on-surface-variant font-data-mono text-data-mono"><span>#40921</span><span class="text-secondary font-semibold">$104,280.50</span></div></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-xs"><nav class="space-y-space-md" data-active-classes="bg-surface-container-high text-primary font-semibold"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">OVERVIEW</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-body-lg">dashboard</span><span>Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">TRADING</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="trade-journal" href="#"><span class="material-symbols-outlined text-body-lg">menu_book</span><span>Trade Journal</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="accounts" href="#"><span class="material-symbols-outlined text-body-lg">account_balance</span><span>Accounts</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-body-lg">show_chart</span><span>Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="strategies" href="#"><span class="material-symbols-outlined text-body-lg">ads_click</span><span>Strategies</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">INTEGRATIONS</div><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs rounded-lg transition-colors bg-surface-container-high text-primary font-semibold" data-path="mt5-connections" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-body-lg">sync</span><span>MT5 Connections</span></div><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">PREFERENCES</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-body-lg">settings</span><span>Settings</span></a></div></nav></div></div><div class="p-space-sm border-t border-outline-variant/20 shrink-0 space-y-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="documentation" href="#"><span class="material-symbols-outlined text-body-lg">description</span><span>Documentation</span></a><div class="p-space-sm bg-surface-container-low rounded-lg border border-outline-variant/30 flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8gBxET52tjBg5t6lNkYa6E0K3p9YHTdE6E2SKJhtkJeoADOg3MoCyiexHCNZYtPDq3jE00xznKcNLAmnRdVBZiAbVaJkY7Q3Tjm_cwaCASRhDg3kNH-rcLtDff-GooM4qG8BIMXaUzLCdHKjsEPFRn9W6onITdcUaiRHv0x0Wqa8G6KfAz5lb5r6iGkwrjkalMw5qw9er-ZkT_mExzbp5-Z_Gn9Ohd_GW1yYOnJ3fDB4pQY1FCt69"/><div class="min-w-0"><div class="font-body-md text-body-md text-on-surface font-semibold truncate">Alex Chen</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">alex@tradeflow.io</div></div></div><span class="px-space-xs py-0.5 rounded bg-secondary/15 text-secondary border border-secondary/30 font-label-caps text-label-caps shrink-0">PRO</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest/85 backdrop-blur-xl border-b border-outline-variant/30 z-40 px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-body-md">terminal</span><span>Terminal</span><span class="text-outline">/</span><span class="text-on-surface font-medium">Live Analytics</span></div><div class="relative flex items-center"><span class="material-symbols-outlined text-body-md text-outline absolute left-space-sm pointer-events-none">search</span><input class="h-8 pl-8 pr-12 bg-surface-container-low rounded-lg border border-outline-variant/40 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary w-64 transition-all" placeholder="Search ticker, journal, tag..." type="text"/><kbd class="absolute right-space-xs px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded border border-outline-variant/30 font-data-mono text-[10px]">⌘K</kbd></div></div><div class="flex items-center gap-space-sm"><button class="h-8 px-space-md rounded-lg bg-surface-container border border-outline-variant/40 hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-space-xs transition-colors" type="button"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Sync MT5</span></button><button class="h-8 px-space-md rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center gap-space-xs" type="button"><span class="material-symbols-outlined text-body-md">add</span><span>Log Trade</span></button><div class="h-4 w-px bg-outline-variant/40 mx-space-xs"></div><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-headline-sm">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8gBxET52tjBg5t6lNkYa6E0K3p9YHTdE6E2SKJhtkJeoADOg3MoCyiexHCNZYtPDq3jE00xznKcNLAmnRdVBZiAbVaJkY7Q3Tjm_cwaCASRhDg3kNH-rcLtDff-GooM4qG8BIMXaUzLCdHKjsEPFRn9W6onITdcUaiRHv0x0Wqa8G6KfAz5lb5r6iGkwrjkalMw5qw9er-ZkT_mExzbp5-Z_Gn9Ohd_GW1yYOnJ3fDB4pQY1FCt69"/></div></header><main class="w-full pt-16 bg-background px-gutter-desktop min-h-screen"><div class="flex flex-col w-full pb-margin-desktop">
+<!-- Status Notice Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg mb-space-xl shadow-sm">
+<div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md relative z-10">
+<div class="flex items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-primary/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-headline-sm">sensors</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-secondary">Real-Time Sync Protocol</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mt-0.5">
+            Real-time sync requires MetaTrader 5 desktop terminal running with TradeFlow EA attached. Historical deals sync automatically every 60 seconds.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<a class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-body-sm text-body-sm transition-colors" href="#quick-guide">
+<span>Installation Guide</span>
+<span class="material-symbols-outlined text-body-md">open_in_new</span>
+</a>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors shadow-sm" id="open-wizard-banner-btn" type="button">
+<span class="material-symbols-outlined text-body-md">add_link</span>
+<span>Connect New MT5</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Header Section with Clean Typography -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider mb-space-xs">
+<span>Terminal Bridge</span>
+<span>/</span>
+<span class="text-primary font-data-mono">EA_GATEWAY_v2.4</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface">MetaTrader 5 Connections</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Automatically sync your trading history from MetaTrader 5 terminals via lightweight Expert Advisor (EA).
+      </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-space-xs transition-colors shadow-sm" id="open-guide-btn" type="button">
+<span class="material-symbols-outlined text-body-md text-on-surface-variant">menu_book</span>
+<span>Setup Documentation</span>
+<span class="material-symbols-outlined text-body-sm text-outline">arrow_outward</span>
+</button>
+<button class="h-9 px-space-lg rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center gap-space-xs shadow-md" id="open-wizard-btn" type="button">
+<span class="material-symbols-outlined text-body-md">add</span>
+<span>Connect New MT5 Account</span>
+</button>
+</div>
+</div>
+<!-- Overview Metrics (4-card row) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-xl">
+<!-- Card 1 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-sm group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant/80">Connected Accounts</span>
+<span class="material-symbols-outlined text-body-lg text-primary">account_balance_wallet</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-semibold tracking-tight">2 Active</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span class="font-body-sm text-body-sm text-tertiary font-medium">1 Offline terminal</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-sm group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant/80">Total Deals Imported</span>
+<span class="material-symbols-outlined text-body-lg text-secondary">database</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-semibold tracking-tight">1,428</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-data-mono">deals</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm">
+<span class="material-symbols-outlined text-body-sm text-secondary">trending_up</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">+42 received today</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-sm group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant/80">Normalized Trades</span>
+<span class="material-symbols-outlined text-body-lg text-primary-container">sync_saved_locally</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-semibold tracking-tight">642</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-data-mono">trades</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Reconciled orders & executions</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-sm group hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant/80">Last Sync Pulse</span>
+<span class="material-symbols-outlined text-body-lg text-secondary">monitor_heart</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-secondary font-semibold tracking-tight">24s ago</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Live Heartbeat Active</span>
+</div>
+</div>
+</div>
+<!-- Active Connections Section -->
+<div class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Configured MT5 Terminals</h2>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-data-mono text-body-sm">3 Total</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm flex items-center gap-space-xs transition-colors" id="refresh-all-btn" type="button">
+<span class="material-symbols-outlined text-body-md" id="refresh-icon">autorenew</span>
+<span>Check Heartbeats</span>
+</button>
+</div>
+</div>
+<!-- Connections Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Connection Card 1 (Active & Syncing) -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:bg-surface-container transition-all">
+<div>
+<!-- Top Row: Badge & Menu -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-secondary/15 text-secondary">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-caps text-label-caps uppercase font-semibold">Connected & Syncing</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Settings">
+<span class="material-symbols-outlined text-body-lg">settings</span>
+</button>
+</div>
+</div>
+<!-- Card Header Info -->
+<div class="mb-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Apex Trader Funding</h3>
+<p class="font-body-sm text-body-sm text-primary font-medium">100K Account • Prop Trader</p>
+</div>
+<!-- Meta Key-Value List -->
+<div class="space-y-space-xs bg-surface-container-lowest/60 p-space-md rounded-lg mb-space-md font-data-mono text-data-mono">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Server:</span>
+<span class="text-on-surface font-semibold">Apex-Live02</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Login ID:</span>
+<span class="text-on-surface flex items-center gap-1">
+<span>40921•••</span>
+<span class="material-symbols-outlined text-body-sm text-outline cursor-pointer hover:text-on-surface" title="Show ID">visibility</span>
+</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Last Pulse:</span>
+<span class="text-secondary font-medium">12s ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Full Sync:</span>
+<span class="text-on-surface">Oct 26, 12:44:02 UTC</span>
+</div>
+</div>
+<!-- Stats Pill -->
+<div class="p-space-xs rounded bg-surface-container px-space-sm mb-space-lg flex items-center justify-between text-on-surface-variant font-data-mono text-body-sm">
+<span class="text-secondary font-semibold">482 deals</span>
+<span class="text-outline">•</span>
+<span>0 dupes</span>
+<span class="text-outline">•</span>
+<span class="text-secondary">0 errors</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-sm">
+<button class="sync-single-btn h-8 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-body-md">sync</span>
+<span>Sync Now</span>
+</button>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center justify-center gap-space-xs transition-colors" onclick="openTokenModal('Apex Trader Funding - 100K', 'tf_live_98a7fbc2041940921_apx02')" type="button">
+<span class="material-symbols-outlined text-body-md text-primary">key</span>
+<span>EA Token</span>
+</button>
+</div>
+</div>
+<!-- Connection Card 2 (Active Connected) -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:bg-surface-container transition-all">
+<div>
+<!-- Top Row: Badge & Menu -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-secondary/15 text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase font-semibold">Connected</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Settings">
+<span class="material-symbols-outlined text-body-lg">settings</span>
+</button>
+</div>
+</div>
+<!-- Card Header Info -->
+<div class="mb-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">FTMO Evaluation 50K</h3>
+<p class="font-body-sm text-body-sm text-primary font-medium">Swing Strategy • Phase 1</p>
+</div>
+<!-- Meta Key-Value List -->
+<div class="space-y-space-xs bg-surface-container-lowest/60 p-space-md rounded-lg mb-space-md font-data-mono text-data-mono">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Server:</span>
+<span class="text-on-surface font-semibold">FTMO-Server3</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Login ID:</span>
+<span class="text-on-surface flex items-center gap-1">
+<span>78201•••</span>
+<span class="material-symbols-outlined text-body-sm text-outline cursor-pointer hover:text-on-surface" title="Show ID">visibility</span>
+</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Last Pulse:</span>
+<span class="text-secondary font-medium">45s ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Full Sync:</span>
+<span class="text-on-surface">Oct 26, 12:00:15 UTC</span>
+</div>
+</div>
+<!-- Stats Pill -->
+<div class="p-space-xs rounded bg-surface-container px-space-sm mb-space-lg flex items-center justify-between text-on-surface-variant font-data-mono text-body-sm">
+<span class="text-secondary font-semibold">214 deals</span>
+<span class="text-outline">•</span>
+<span>0 dupes</span>
+<span class="text-outline">•</span>
+<span class="text-secondary">0 errors</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-sm">
+<button class="sync-single-btn h-8 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-body-md">sync</span>
+<span>Sync Now</span>
+</button>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center justify-center gap-space-xs transition-colors" onclick="openTokenModal('FTMO Evaluation 50K', 'tf_live_1109ff628bc78201_ftmo03')" type="button">
+<span class="material-symbols-outlined text-body-md text-primary">key</span>
+<span>EA Token</span>
+</button>
+</div>
+</div>
+<!-- Connection Card 3 (Attention / Disconnected) -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-low p-space-lg shadow-sm hover:bg-surface-container transition-all">
+<div>
+<!-- Top Row: Badge & Menu -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs px-2.5 py-1 rounded bg-tertiary-container/20 text-tertiary">
+<span class="material-symbols-outlined text-body-sm">warning</span>
+<span class="font-label-caps text-label-caps uppercase font-semibold">EA Offline (> 2 hrs)</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Settings">
+<span class="material-symbols-outlined text-body-lg">settings</span>
+</button>
+</div>
+</div>
+<!-- Card Header Info -->
+<div class="mb-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Personal IC Markets Live</h3>
+<p class="font-body-sm text-body-sm text-tertiary font-medium">Raw Spread Account • Scalping</p>
+</div>
+<!-- Meta Key-Value List -->
+<div class="space-y-space-xs bg-surface-container-lowest/60 p-space-md rounded-lg mb-space-md font-data-mono text-data-mono">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Server:</span>
+<span class="text-on-surface font-semibold">ICMarketsSC-Live05</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Login ID:</span>
+<span class="text-on-surface flex items-center gap-1">
+<span>11942•••</span>
+<span class="material-symbols-outlined text-body-sm text-outline cursor-pointer hover:text-on-surface" title="Show ID">visibility</span>
+</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Last Pulse:</span>
+<span class="text-tertiary font-medium">2h 14m ago</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Full Sync:</span>
+<span class="text-on-surface-variant">Oct 26, 10:15:20 UTC</span>
+</div>
+</div>
+<!-- Troubleshooting Warning Box -->
+<div class="p-space-sm rounded-lg bg-tertiary-container/15 text-tertiary-fixed mb-space-lg flex items-start gap-space-xs text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-body-md shrink-0 text-tertiary">info</span>
+<span class="leading-relaxed">MT5 terminal closed or WebRequest URL not allowed in MT5 Options. Reconnect EA on your VPS/desktop.</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-sm">
+<button class="h-8 px-space-sm rounded-lg bg-tertiary-container/20 text-tertiary hover:bg-tertiary-container/30 font-body-sm text-body-sm flex items-center justify-center gap-space-xs transition-colors" onclick="testConnectionToast()" type="button">
+<span class="material-symbols-outlined text-body-md">network_check</span>
+<span>Test Ping</span>
+</button>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center justify-center gap-space-xs transition-colors" onclick="openDiagnosticModal()" type="button">
+<span class="material-symbols-outlined text-body-md">build</span>
+<span>Diagnostics</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Embedded EA Setup Wizard & Checklist Preview -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-sm mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-lg gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-primary font-semibold">Self-Hosted Integration</span>
+<span class="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-data-mono text-body-sm">v2.4 EA Engine</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Connect MT5 Wizard & Rapid Setup</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Follow these four surgical steps to attach the TradeFlow EA to your MetaTrader 5 terminal.</p>
+</div>
+<!-- Segmented Step Indicator Pills -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-1 rounded-lg">
+<button class="step-tab px-space-md py-1 rounded text-body-sm font-body-sm font-medium transition-all bg-surface-container text-primary" id="step-tab-1" onclick="switchStep(1)" type="button">1. Credentials</button>
+<button class="step-tab px-space-md py-1 rounded text-body-sm font-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface" id="step-tab-2" onclick="switchStep(2)" type="button">2. EA Token</button>
+<button class="step-tab px-space-md py-1 rounded text-body-sm font-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface" id="step-tab-3" onclick="switchStep(3)" type="button">3. Terminal Setup</button>
+<button class="step-tab px-space-md py-1 rounded text-body-sm font-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface" id="step-tab-4" onclick="switchStep(4)" type="button">4. Verification</button>
+</div>
+</div>
+<!-- Step Contents Container -->
+<div class="pt-space-md">
+<!-- Step 1: Account Details -->
+<div class="wizard-pane" id="wizard-step-1">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-lg">
+<div class="space-y-space-xs">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Account Identifier Label</label>
+<input class="w-full h-9 px-space-md bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" id="wiz-acc-name" placeholder="e.g. IC Markets Live" type="text" value="Prop Firm Challenge 100k"/>
+<span class="font-body-sm text-body-sm text-outline">Internal label for your dashboard journal.</span>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Broker MT5 Server</label>
+<input class="w-full h-9 px-space-md bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" id="wiz-server" placeholder="e.g. Apex-Live02, FTMO-Server" type="text" value="FundingPips-Server"/>
+<span class="font-body-sm text-body-sm text-outline">Exact server name displayed in MT5 status bar.</span>
+</div>
+<div class="space-y-space-xs">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">MT5 Login Account ID</label>
+<input class="w-full h-9 px-space-md bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors font-data-mono" id="wiz-login" placeholder="e.g. 5092144" type="text" value="8942105"/>
+<span class="font-body-sm text-body-sm text-outline">Read-only investor or master login number.</span>
+</div>
+</div>
+<div class="flex justify-end gap-space-sm pt-space-sm">
+<button class="h-9 px-space-lg rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center gap-space-xs" onclick="switchStep(2)" type="button">
+<span>Generate Integration Token</span>
+<span class="material-symbols-outlined text-body-md">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Step 2: One-time EA Integration Token -->
+<div class="wizard-pane hidden" id="wizard-step-2">
+<div class="p-space-lg bg-surface-container-lowest rounded-xl mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">vpn_key</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">One-Time EA Integration Token</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps uppercase">Generated • Read-Only</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            This token links incoming payload packets from your MetaTrader 5 Expert Advisor to your TradeFlow analytical account.
+          </p>
+<div class="flex flex-col sm:flex-row items-center gap-space-sm bg-surface-container p-space-sm rounded-lg mb-space-md">
+<div class="w-full overflow-x-auto font-data-mono text-data-mono text-primary font-semibold tracking-wider select-all px-space-sm">
+<span id="wizard-token-val">tf_live_98a7fbc2041b802a4d091e_mt5gateway</span>
+</div>
+<button class="w-full sm:w-auto shrink-0 h-9 px-space-md rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center justify-center gap-space-xs" id="copy-token-btn" onclick="copyWizardToken()" type="button">
+<span class="material-symbols-outlined text-body-md" id="copy-icon">content_copy</span>
+<span id="copy-text">Copy Token</span>
+</button>
+</div>
+<!-- Security Callout Box -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary text-headline-sm shrink-0">verified_user</span>
+<div class="text-body-sm font-body-sm">
+<strong class="text-on-surface font-semibold">Strict Security Protocol:</strong>
+<span class="text-on-surface-variant"> Never share this token. It does not provide trading access, placing orders, or modifying positions. It grants strictly read-only deal history and ping telemetry synchronization.</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm hover:bg-surface-container-high transition-colors" onclick="switchStep(1)" type="button">
+            Back: Account Details
+          </button>
+<button class="h-9 px-space-lg rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center gap-space-xs" onclick="switchStep(3)" type="button">
+<span>Continue to MT5 Setup</span>
+<span class="material-symbols-outlined text-body-md">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Step 3: MT5 EA Setup Checklist -->
+<div class="wizard-pane hidden" id="wizard-step-3">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-lg">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center font-data-mono text-body-md font-bold mb-space-sm">
+                01
+              </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Download Sync EA</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Download the lightweight, sandboxed compiled Expert Advisor binary (<code class="font-data-mono text-primary">TradeFlowSync.ex5</code>).
+              </p>
+</div>
+<a class="h-9 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center justify-center gap-space-xs transition-colors" href="#download" onclick="downloadEaMock()">
+<span class="material-symbols-outlined text-body-md text-primary">download</span>
+<span>TradeFlowSync.ex5</span>
+</a>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center font-data-mono text-body-md font-bold mb-space-sm">
+                02
+              </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Whitelist WebRequest URL</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                In MT5 go to <strong class="text-on-surface">Tools > Options > Expert Advisors</strong>. Check "Allow WebRequest for listed URL" and add:
+              </p>
+</div>
+<div class="flex items-center justify-between p-space-xs bg-surface-container rounded font-data-mono text-body-sm text-secondary">
+<span class="truncate">https://api.tradeflow.io</span>
+<button class="text-on-surface-variant hover:text-on-surface p-1" onclick="navigator.clipboard.writeText('https://api.tradeflow.io')" title="Copy URL">
+<span class="material-symbols-outlined text-body-sm">content_copy</span>
+</button>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest flex flex-col justify-between">
+<div>
+<div class="w-8 h-8 rounded-lg bg-primary/20 text-primary flex items-center justify-center font-data-mono text-body-md font-bold mb-space-sm">
+                03
+              </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Attach to Any Chart</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Drag <strong class="text-on-surface">TradeFlowSync</strong> onto any 1-minute chart (e.g., EURUSD M1). Paste your copied Integration Token in Inputs.
+              </p>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container rounded text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-body-md">check_circle</span>
+<span>Algo Trading enabled in toolbar</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center pt-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm hover:bg-surface-container-high transition-colors" onclick="switchStep(2)" type="button">
+            Back: Integration Token
+          </button>
+<button class="h-9 px-space-lg rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center gap-space-xs" onclick="switchStep(4); startListeningPing();" type="button">
+<span>Verify Live Terminal Ping</span>
+<span class="material-symbols-outlined text-body-md">wifi_tethering</span>
+</button>
+</div>
+</div>
+<!-- Step 4: Verification Test -->
+<div class="wizard-pane hidden" id="wizard-step-4">
+<div class="p-space-xl rounded-xl bg-surface-container-lowest flex flex-col items-center text-center max-w-xl mx-auto my-space-sm">
+<div class="relative w-20 h-20 mb-space-lg flex items-center justify-center" id="ping-spinner">
+<div class="absolute inset-0 rounded-full border-2 border-primary/20 animate-ping"></div>
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-xl animate-pulse">satellite_alt</span>
+</div>
+</div>
+<div class="hidden w-16 h-16 rounded-full bg-secondary/20 text-secondary items-center justify-center mb-space-lg" id="ping-success-icon">
+<span class="material-symbols-outlined text-headline-xl">task_alt</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-space-xs" id="ping-title">Listening for Incoming Heartbeat Ping...</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg" id="ping-desc">
+            Ensure your MT5 terminal has Algo Trading enabled and the EA is attached. The gateway polls every 3 seconds for the initial handshake packet.
+          </p>
+<div class="w-full bg-surface-container rounded-lg p-space-md font-data-mono text-data-mono text-left mb-space-lg space-y-1 text-on-surface-variant">
+<div class="flex items-center justify-between text-body-sm">
+<span>LISTENER_PORT:</span>
+<span class="text-on-surface">443 (TLS 1.3)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span>BROKER_MATCH:</span>
+<span class="text-on-surface">FundingPips-Server</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span>STATUS:</span>
+<span class="text-primary font-bold animate-pulse" id="ping-status-text">POLLING_PAYLOAD...</span>
+</div>
+</div>
+<div class="flex gap-space-md">
+<button class="h-9 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors" onclick="simulateSuccessfulPing()" type="button">
+              Simulate Test Ping (Instant)
+            </button>
+<button class="h-9 px-space-lg rounded-lg bg-surface-container-highest text-on-surface-variant font-body-sm text-body-sm font-semibold transition-colors cursor-not-allowed" disabled="" id="finish-btn" type="button">
+              Complete Connection
+            </button>
+</div>
+</div>
+<div class="flex justify-start pt-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm hover:bg-surface-container-high transition-colors" onclick="switchStep(3)" type="button">
+            Back: Terminal Checklist
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Sync Activity Log Table -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-lg gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Live Sync Ingestion Audit Log</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Granular stream of raw deal reconciliation, delta cycles, and terminal pulses.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-data-mono text-body-sm text-on-surface-variant">Stream: <strong class="text-secondary">ACTIVE</strong></span>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm transition-colors" onclick="clearSyncLogs()" type="button">
+          Clear View
+        </button>
+</div>
+</div>
+<!-- Table Canvas -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="text-on-surface-variant/80 font-label-caps text-label-caps uppercase bg-surface-container-lowest/60">
+<th class="py-space-sm px-space-md">Timestamp</th>
+<th class="py-space-sm px-space-md">Account</th>
+<th class="py-space-sm px-space-md">Sync Type</th>
+<th class="py-space-sm px-space-md text-right">Records</th>
+<th class="py-space-sm px-space-md text-right">Inserted</th>
+<th class="py-space-sm px-space-md text-right">Duplicates</th>
+<th class="py-space-sm px-space-md">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-data-mono text-data-mono" id="sync-log-tbody">
+<!-- Row 1: Apex delta -->
+<tr class="hover:bg-surface-container/70 transition-colors">
+<td class="py-3 px-space-md text-on-surface">12:44:02 UTC</td>
+<td class="py-3 px-space-md text-on-surface font-semibold font-body-md">Apex 100k</td>
+<td class="py-3 px-space-md text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-body-sm">Delta Sync</span>
+</td>
+<td class="py-3 px-space-md text-right text-on-surface">2 deals</td>
+<td class="py-3 px-space-md text-right text-secondary font-semibold">2 inserted</td>
+<td class="py-3 px-space-md text-right text-on-surface-variant">0</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary/15 text-secondary text-body-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Success
+              </span>
+</td>
+</tr>
+<!-- Row 2: Apex heartbeat -->
+<tr class="hover:bg-surface-container/70 transition-colors bg-surface-container-lowest/20">
+<td class="py-3 px-space-md text-on-surface">12:43:01 UTC</td>
+<td class="py-3 px-space-md text-on-surface font-semibold font-body-md">Apex 100k</td>
+<td class="py-3 px-space-md text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-body-sm">Heartbeat Ping</span>
+</td>
+<td class="py-3 px-space-md text-right text-on-surface-variant">0 deals</td>
+<td class="py-3 px-space-md text-right text-on-surface-variant">0</td>
+<td class="py-3 px-space-md text-right text-on-surface-variant">0</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary/15 text-secondary text-body-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Success
+              </span>
+</td>
+</tr>
+<!-- Row 3: FTMO Full history -->
+<tr class="hover:bg-surface-container/70 transition-colors">
+<td class="py-3 px-space-md text-on-surface">12:00:15 UTC</td>
+<td class="py-3 px-space-md text-on-surface font-semibold font-body-md">FTMO 50k</td>
+<td class="py-3 px-space-md text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-body-sm">Full History Sync</span>
+</td>
+<td class="py-3 px-space-md text-right text-on-surface">120 deals</td>
+<td class="py-3 px-space-md text-right text-secondary font-semibold">18 new</td>
+<td class="py-3 px-space-md text-right text-on-surface-variant">102 dupes</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary/15 text-secondary text-body-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Success
+              </span>
+</td>
+</tr>
+<!-- Row 4: IC Markets error -->
+<tr class="hover:bg-surface-container/70 transition-colors bg-surface-container-lowest/20">
+<td class="py-3 px-space-md text-on-surface">10:15:20 UTC</td>
+<td class="py-3 px-space-md text-on-surface font-semibold font-body-md">IC Markets</td>
+<td class="py-3 px-space-md text-on-surface-variant">
+<span class="px-2 py-0.5 rounded bg-surface-container text-tertiary font-body-sm">Heartbeat</span>
+</td>
+<td class="py-3 px-space-md text-right text-outline">—</td>
+<td class="py-3 px-space-md text-right text-outline">—</td>
+<td class="py-3 px-space-md text-right text-outline">—</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary text-body-sm font-semibold w-max">
+<span class="material-symbols-outlined text-body-sm">error</span>
+                  Timeout
+                </span>
+<span class="text-body-sm font-body-sm text-tertiary/90 mt-0.5">Details: Socket timeout from client IP</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Log footer metadata -->
+<div class="flex flex-col sm:flex-row items-center justify-between pt-space-lg text-on-surface-variant font-body-sm text-body-sm gap-space-sm">
+<div class="flex items-center gap-space-xs font-data-mono">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Polling rate: 60s deals stream / 30s heartbeat</span>
+</div>
+<div>Showing latest 4 transactions • Retained for 30 days</div>
+</div>
+</div>
+<!-- Reusable Modal: Manage EA Token -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-surface-container-lowest/80 backdrop-blur-sm hidden" id="token-modal">
+<div class="relative w-full max-w-lg rounded-xl bg-surface-container-low p-space-lg shadow-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">key</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface" id="modal-acc-title">Manage EA Token</h3>
+</div>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="closeTokenModal()" type="button">
+<span class="material-symbols-outlined text-body-lg">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+        Use this persistent token in the MT5 Expert Advisor inputs under <code class="font-data-mono text-primary">InpTradeFlowToken</code>.
+      </p>
+<div class="p-space-md rounded-lg bg-surface-container-lowest mb-space-md font-data-mono text-data-mono flex items-center justify-between">
+<span class="text-primary truncate select-all" id="modal-token-str">tf_live_98a7fbc2041940921_apx02</span>
+<button class="text-on-surface-variant hover:text-on-surface p-1 shrink-0 ml-2" onclick="copyModalToken()">
+<span class="material-symbols-outlined text-body-md" id="modal-copy-icon">content_copy</span>
+</button>
+</div>
+<div class="p-space-sm rounded bg-surface-container text-body-sm font-body-sm text-on-surface-variant mb-space-lg">
+<span class="text-secondary font-semibold">✓ Read-Only Scope:</span> Cannot access balances, withdraw, or transmit execution orders.
+      </div>
+<div class="flex justify-between items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-tertiary font-body-sm text-body-sm transition-colors flex items-center gap-space-xs" onclick="rotateTokenMock()" type="button">
+<span class="material-symbols-outlined text-body-md">sync</span>
+<span>Regenerate Key</span>
+</button>
+<button class="h-9 px-space-lg rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors" onclick="closeTokenModal()" type="button">
+          Done
+        </button>
+</div>
+</div>
+</div>
+<!-- Reusable Modal: Diagnostic Viewer -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-surface-container-lowest/80 backdrop-blur-sm hidden" id="diagnostic-modal">
+<div class="relative w-full max-w-xl rounded-xl bg-surface-container-low p-space-lg shadow-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-headline-sm">warning</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Diagnostic Analyzer: IC Markets</h3>
+</div>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="closeDiagnosticModal()" type="button">
+<span class="material-symbols-outlined text-body-lg">close</span>
+</button>
+</div>
+<div class="space-y-space-sm mb-space-lg font-data-mono text-data-mono text-body-sm">
+<div class="p-space-sm rounded bg-surface-container-lowest text-on-surface-variant flex items-center justify-between">
+<span>PING_ENDPOINT:</span>
+<span class="text-secondary">https://api.tradeflow.io/v1/ping (200 OK)</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest text-on-surface-variant flex items-center justify-between">
+<span>CLIENT_TERMINAL:</span>
+<span class="text-tertiary">No incoming socket packet for 134 minutes</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container-lowest text-on-surface-variant flex items-center justify-between">
+<span>COMMON_CAUSE:</span>
+<span class="text-on-surface">MT5 closed / PC sleep / URL unwhitelisted</span>
+</div>
+</div>
+<div class="rounded-lg bg-surface-container p-space-md mb-space-lg text-body-sm font-body-sm space-y-space-xs text-on-surface-variant">
+<strong class="text-on-surface block font-semibold">Recommended Fix:</strong>
+<p>1. Open your MT5 terminal on your VPS or desktop.</p>
+<p>2. Verify "Algo Trading" button is toggled green in the standard toolbar.</p>
+<p>3. Check Experts log tab in terminal for code 4014 (WebRequest not allowed).</p>
+</div>
+<div class="flex justify-end gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm" onclick="closeDiagnosticModal()" type="button">
+          Dismiss
+        </button>
+<button class="h-9 px-space-lg rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors" onclick="closeDiagnosticModal(); testConnectionToast();" type="button">
+          Run Handshake Probe
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Host -->
+<div class="fixed bottom-6 right-6 z-50 px-space-md py-space-sm rounded-lg bg-surface-container-highest text-on-surface font-body-sm text-body-sm shadow-xl flex items-center gap-space-sm transform translate-y-20 opacity-0 transition-all pointer-events-none" id="toast-banner">
+<span class="material-symbols-outlined text-secondary text-body-lg" id="toast-icon">check_circle</span>
+<span id="toast-text">Operation completed</span>
+</div>
+</div>
+<script>
+  // Tab Switching inside Connect Wizard
+  function switchStep(stepNumber) {
+    for (let i = 1; i <= 4; i++) {
+      const pane = document.getElementById('wizard-step-' + i);
+      const tab = document.getElementById('step-tab-' + i);
+      if (pane) {
+        if (i === stepNumber) {
+          pane.classList.remove('hidden');
+        } else {
+          pane.classList.add('hidden');
+        }
+      }
+      if (tab) {
+        if (i === stepNumber) {
+          tab.classList.add('bg-surface-container', 'text-primary');
+          tab.classList.remove('text-on-surface-variant');
+        } else {
+          tab.classList.remove('bg-surface-container', 'text-primary');
+          tab.classList.add('text-on-surface-variant');
+        }
+      }
+    }
+  }
+
+  // Copy Wizard Token
+  function copyWizardToken() {
+    const val = document.getElementById('wizard-token-val').innerText;
+    navigator.clipboard.writeText(val).then(() => {
+      const copyText = document.getElementById('copy-text');
+      const copyIcon = document.getElementById('copy-icon');
+      copyText.innerText = 'Copied!';
+      copyIcon.innerText = 'done';
+      showToast('EA Token copied to clipboard!');
+      setTimeout(() => {
+        copyText.innerText = 'Copy Token';
+        copyIcon.innerText = 'content_copy';
+      }, 2500);
+    });
+  }
+
+  // Simulate Listening & Ping
+  let pingTimeout;
+  function startListeningPing() {
+    clearTimeout(pingTimeout);
+    document.getElementById('ping-spinner').classList.remove('hidden');
+    document.getElementById('ping-success-icon').classList.add('hidden');
+    document.getElementById('ping-success-icon').classList.remove('flex');
+    document.getElementById('ping-title').innerText = 'Listening for Incoming Heartbeat Ping...';
+    document.getElementById('ping-desc').innerText = 'Ensure your MT5 terminal has Algo Trading enabled and the EA is attached. The gateway polls every 3 seconds for the initial handshake packet.';
+    document.getElementById('ping-status-text').innerText = 'POLLING_PAYLOAD...';
+    document.getElementById('ping-status-text').className = 'text-primary font-bold animate-pulse';
+    
+    const finishBtn = document.getElementById('finish-btn');
+    finishBtn.disabled = true;
+    finishBtn.className = 'h-9 px-space-lg rounded-lg bg-surface-container-highest text-on-surface-variant font-body-sm text-body-sm font-semibold transition-colors cursor-not-allowed';
+
+    // Auto trigger success after 6s for demo realism
+    pingTimeout = setTimeout(() => {
+      simulateSuccessfulPing();
+    }, 6000);
+  }
+
+  function simulateSuccessfulPing() {
+    clearTimeout(pingTimeout);
+    document.getElementById('ping-spinner').classList.add('hidden');
+    const succ = document.getElementById('ping-success-icon');
+    succ.classList.remove('hidden');
+    succ.classList.add('flex');
+    
+    document.getElementById('ping-title').innerText = 'Terminal Handshake Verified!';
+    document.getElementById('ping-desc').innerText = 'Initial heartbeat confirmed from FundingPips-Server (#8942105). Read-only deal ingestion stream active.';
+    document.getElementById('ping-status-text').innerText = 'HANDSHAKE_ESTABLISHED (200)';
+    document.getElementById('ping-status-text').className = 'text-secondary font-bold';
+
+    const finishBtn = document.getElementById('finish-btn');
+    finishBtn.disabled = false;
+    finishBtn.className = 'h-9 px-space-lg rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors cursor-pointer';
+    finishBtn.onclick = function() {
+      showToast('Account successfully linked & added to active grid!');
+      switchStep(1);
+    };
+  }
+
+  // Token Modal Logic
+  function openTokenModal(accountName, tokenVal) {
+    document.getElementById('modal-acc-title').innerText = 'Manage EA Token: ' + accountName;
+    document.getElementById('modal-token-str').innerText = tokenVal;
+    document.getElementById('token-modal').classList.remove('hidden');
+  }
+
+  function closeTokenModal() {
+    document.getElementById('token-modal').classList.add('hidden');
+  }
+
+  function copyModalToken() {
+    const text = document.getElementById('modal-token-str').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const icon = document.getElementById('modal-copy-icon');
+      icon.innerText = 'done';
+      showToast('Token copied to clipboard');
+      setTimeout(() => { icon.innerText = 'content_copy'; }, 2000);
+    });
+  }
+
+  function rotateTokenMock() {
+    const rand = 'tf_live_' + Math.random().toString(36).substring(2, 12) + '_' + Math.random().toString(36).substring(2, 8);
+    document.getElementById('modal-token-str').innerText = rand;
+    showToast('Token regenerated. Update InpTradeFlowToken in MT5 EA settings.');
+  }
+
+  // Diagnostic Modal Logic
+  function openDiagnosticModal() {
+    document.getElementById('diagnostic-modal').classList.remove('hidden');
+  }
+
+  function closeDiagnosticModal() {
+    document.getElementById('diagnostic-modal').classList.add('hidden');
+  }
+
+  function testConnectionToast() {
+    showToast('Probing IC Markets IP... Heartbeat ping sent');
+  }
+
+  function downloadEaMock() {
+    showToast('Starting download for TradeFlowSync.ex5 (v2.4)');
+  }
+
+  function clearSyncLogs() {
+    const tbody = document.getElementById('sync-log-tbody');
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="7" class="py-8 text-center text-on-surface-variant font-body-sm">
+          No recent activity logs. Waiting for next 60s ingestion cycle...
+        </td>
+      </tr>
+    `;
+    showToast('Sync activity logs cleared.');
+  }
+
+  // Global Toast function
+  function showToast(message) {
+    const toast = document.getElementById('toast-banner');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = message;
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      toast.classList.add('translate-y-20', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3200);
+  }
+
+  // Connect Wizard Action buttons
+  document.getElementById('open-wizard-btn')?.addEventListener('click', () => {
+    switchStep(1);
+    const wiz = document.getElementById('wiz-acc-name');
+    wiz.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    wiz.focus();
+  });
+
+  document.getElementById('open-wizard-banner-btn')?.addEventListener('click', () => {
+    switchStep(1);
+    const wiz = document.getElementById('wiz-acc-name');
+    wiz.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    wiz.focus();
+  });
+
+  // Refresh All Button spin
+  document.getElementById('refresh-all-btn')?.addEventListener('click', function() {
+    const icon = document.getElementById('refresh-icon');
+    icon.classList.add('animate-spin');
+    showToast('Checking terminal connectivity & EA heartbeats...');
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      showToast('2 terminals online, 1 offline (IC Markets).');
+    }, 1200);
+  });
+
+  // Single sync clickers
+  document.querySelectorAll('.sync-single-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const icon = this.querySelector('.material-symbols-outlined');
+      if (icon) icon.classList.add('animate-spin');
+      showToast('Requesting instant delta synchronization from EA...');
+      setTimeout(() => {
+        if (icon) icon.classList.remove('animate-spin');
+        showToast('Delta sync complete: 0 new deals found.');
+      }, 1500);
+    });
+  });
+</script></main></div></body></html>

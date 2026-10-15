@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#dfe2ef","on-tertiary-fixed-variant":"#881c2c","on-primary":"#2a039d","surface-container-lowest":"#0a0e17","surface-bright":"#353943","primary":"#c7bfff","on-secondary":"#003822","on-secondary-fixed":"#002112","surface":"#0f131c","inverse-on-surface":"#2c303a","background":"#0f131c","on-error":"#690005","on-background":"#dfe2ef","on-error-container":"#ffdad6","surface-container-low":"#181c25","secondary":"#51de9d","surface-dim":"#0f131c","surface-container":"#1c2029","surface-variant":"#31353f","error":"#ffb4ab","primary-fixed-dim":"#c7bfff","tertiary-fixed":"#ffdada","on-tertiary-container":"#5b0014","outline":"#928f9f","inverse-primary":"#5a49cb","surface-container-highest":"#31353f","tertiary":"#ffb3b5","on-secondary-fixed-variant":"#005234","surface-tint":"#c7bfff","error-container":"#93000a","tertiary-container":"#ea6670","tertiary-fixed-dim":"#ffb3b5","on-primary-fixed":"#170065","surface-container-high":"#262a33","secondary-fixed":"#71fcb8","primary-container":"#8e7fff","inverse-surface":"#dfe2ef","on-secondary-container":"#003b24","on-tertiary-fixed":"#40000b","primary-fixed":"#e4dfff","on-tertiary":"#680018","on-primary-fixed-variant":"#422db2","outline-variant":"#474554","on-primary-container":"#24008c","on-surface-variant":"#c8c4d6","secondary-fixed-dim":"#51de9d","secondary-container":"#00b175"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","margin":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","gutter-desktop":"1.25rem","margin-tablet":"1.5rem","space-lg":"1rem","space-md":"0.75rem","gutter":"1rem","margin-desktop":"2rem"},fontFamily:{"headline-lg":["Inter"],"metric-display":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-xl-mobile":["Inter"],"body-md":["Inter"],"data-mono":["JetBrains Mono"],"headline-xl":["Inter"],"headline-sm":["Inter"],"label-caps":["Inter"]},fontSize:{"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"metric-display":["1.75rem",{"lineHeight":"2rem","letterSpacing":"-0.03em","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.01em","fontWeight":"400"}],"headline-xl-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0","fontWeight":"400"}],"data-mono":["0.8125rem",{"lineHeight":"1.125rem","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"600"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.06em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant/20 shrink-0"><img alt="TradeFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XT14wmwir-16iJY6uGQbqpQ9GRWdUPnk8rP5DkBygiVc5Qew3tg1A8MFFgzdjtgOg8h3zBBpE2L8CFZY1hevUnyrt2TDHo-wluqXco-oA8YtAm1rlNLDs_k2BfW0uXUqrunla0sPKgUS_Ec8vxs-h_yV7E1i0AN_tIDyahT8K8AoVK7AjAaHQzUDKH7ZI0RzUPnzPoLLsbmJtyRF4LtKd-edGgtFWF2GlPTKhSsm5-qmdQ-XfzsMAQrnc"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TradeFlow</span></div><div class="p-space-sm shrink-0"><div class="p-space-sm bg-surface-container-low rounded-lg border border-outline-variant/30 cursor-pointer hover:border-outline/50 transition-colors"><div class="flex items-center justify-between mb-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-body-sm text-body-sm text-on-surface truncate font-semibold">Apex 100k Funded</span></div><span class="material-symbols-outlined text-body-sm text-on-surface-variant">unfold_more</span></div><div class="flex items-center justify-between text-on-surface-variant font-data-mono text-data-mono"><span>#40921</span><span class="text-secondary font-semibold">$104,280.50</span></div></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-xs"><nav class="space-y-space-md" data-active-classes="bg-surface-container-high text-primary font-semibold"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">OVERVIEW</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-body-lg">dashboard</span><span>Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">TRADING</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="trade-journal" href="#"><span class="material-symbols-outlined text-body-lg">menu_book</span><span>Trade Journal</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="accounts" href="#"><span class="material-symbols-outlined text-body-lg">account_balance</span><span>Accounts</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-surface-container-high text-primary font-semibold" data-path="analytics" href="#"><span class="material-symbols-outlined text-body-lg">show_chart</span><span>Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="strategies" href="#"><span class="material-symbols-outlined text-body-lg">ads_click</span><span>Strategies</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">INTEGRATIONS</div><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="mt5-connections" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-body-lg">sync</span><span>MT5 Connections</span></div><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">PREFERENCES</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-body-lg">settings</span><span>Settings</span></a></div></nav></div></div><div class="p-space-sm border-t border-outline-variant/20 shrink-0 space-y-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="documentation" href="#"><span class="material-symbols-outlined text-body-lg">description</span><span>Documentation</span></a><div class="p-space-sm bg-surface-container-low rounded-lg border border-outline-variant/30 flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8gBxET52tjBg5t6lNkYa6E0K3p9YHTdE6E2SKJhtkJeoADOg3MoCyiexHCNZYtPDq3jE00xznKcNLAmnRdVBZiAbVaJkY7Q3Tjm_cwaCASRhDg3kNH-rcLtDff-GooM4qG8BIMXaUzLCdHKjsEPFRn9W6onITdcUaiRHv0x0Wqa8G6KfAz5lb5r6iGkwrjkalMw5qw9er-ZkT_mExzbp5-Z_Gn9Ohd_GW1yYOnJ3fDB4pQY1FCt69"/><div class="min-w-0"><div class="font-body-md text-body-md text-on-surface font-semibold truncate">Alex Chen</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">alex@tradeflow.io</div></div></div><span class="px-space-xs py-0.5 rounded bg-secondary/15 text-secondary border border-secondary/30 font-label-caps text-label-caps shrink-0">PRO</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest/85 backdrop-blur-xl border-b border-outline-variant/30 z-40 px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-body-md">terminal</span><span>Terminal</span><span class="text-outline">/</span><span class="text-on-surface font-medium">Live Analytics</span></div><div class="relative flex items-center"><span class="material-symbols-outlined text-body-md text-outline absolute left-space-sm pointer-events-none">search</span><input class="h-8 pl-8 pr-12 bg-surface-container-low rounded-lg border border-outline-variant/40 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary w-64 transition-all" placeholder="Search ticker, journal, tag..." type="text"/><kbd class="absolute right-space-xs px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded border border-outline-variant/30 font-data-mono text-[10px]">⌘K</kbd></div></div><div class="flex items-center gap-space-sm"><button class="h-8 px-space-md rounded-lg bg-surface-container border border-outline-variant/40 hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-space-xs transition-colors" type="button"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Sync MT5</span></button><button class="h-8 px-space-md rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center gap-space-xs" type="button"><span class="material-symbols-outlined text-body-md">add</span><span>Log Trade</span></button><div class="h-4 w-px bg-outline-variant/40 mx-space-xs"></div><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-headline-sm">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8gBxET52tjBg5t6lNkYa6E0K3p9YHTdE6E2SKJhtkJeoADOg3MoCyiexHCNZYtPDq3jE00xznKcNLAmnRdVBZiAbVaJkY7Q3Tjm_cwaCASRhDg3kNH-rcLtDff-GooM4qG8BIMXaUzLCdHKjsEPFRn9W6onITdcUaiRHv0x0Wqa8G6KfAz5lb5r6iGkwrjkalMw5qw9er-ZkT_mExzbp5-Z_Gn9Ohd_GW1yYOnJ3fDB4pQY1FCt69"/></div></header><main class="w-full pt-16 bg-background px-gutter-desktop min-h-screen"><div class="flex flex-col w-full pb-16 space-y-space-xl">
+<!-- Top Context Header & Precision Filter Toolbar -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg pt-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-label-caps uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span>Quantitative Attribution Model</span>
+<span class="text-outline/40">/</span>
+<span class="text-on-surface-variant font-data-mono lowercase">v4.8-live</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Trading Analytics & Performance</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Deep-dive into your statistical edge, behavioral leaks, win distributions, and risk-adjusted metrics across continuous order executions.
+      </p>
+</div>
+<!-- Quick Action / Global Filter Ribbon -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container-low p-space-xs rounded-xl shadow-sm">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-body-md text-outline absolute left-space-sm pointer-events-none">account_balance_wallet</span>
+<select class="h-8 pl-8 pr-7 bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high cursor-pointer appearance-none">
+<option>Apex 100k Funded (#40921)</option>
+<option>Topstep 50k Combine (#1883)</option>
+<option>Personal Interactive Brokers</option>
+<option>Aggregate All Accounts</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-outline absolute right-space-xs pointer-events-none">expand_more</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-body-md text-outline absolute left-space-sm pointer-events-none">date_range</span>
+<select class="h-8 pl-8 pr-7 bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high cursor-pointer appearance-none">
+<option>Last 90 Days</option>
+<option>Last 30 Days</option>
+<option>Current Quarter (Q3)</option>
+<option>Year to Date (YTD)</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-outline absolute right-space-xs pointer-events-none">expand_more</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-body-md text-outline absolute left-space-sm pointer-events-none">layers</span>
+<select class="h-8 pl-8 pr-7 bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high cursor-pointer appearance-none">
+<option>All Strategies</option>
+<option>London Liquidity Sweep</option>
+<option>FVG Inversion Reversal</option>
+<option>NY Momentum Breaker</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-outline absolute right-space-xs pointer-events-none">expand_more</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined text-body-md text-outline absolute left-space-sm pointer-events-none">currency_exchange</span>
+<select class="h-8 pl-8 pr-7 bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg focus:outline-none focus:bg-surface-container-high cursor-pointer appearance-none">
+<option>All Tickers (XAU, NQ, ES)</option>
+<option>XAUUSD (Gold Spot)</option>
+<option>NAS100 / NQ Futures</option>
+<option>EURUSD</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-outline absolute right-space-xs pointer-events-none">expand_more</span>
+</div>
+<button class="h-8 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-space-xs transition-colors shadow-sm ml-auto lg:ml-0" type="button">
+<span class="material-symbols-outlined text-body-md text-primary">ios_share</span>
+<span>Export Report</span>
+</button>
+</div>
+</section>
+<!-- Core Risk & Expectancy KPI Ribbon -->
+<section class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-space-sm">
+<!-- Expectancy -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Expectancy</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary/15 text-secondary font-data-mono text-[10px]">+0.42 R</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface font-data-mono font-semibold tracking-tight text-secondary">+$61.15</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">per trade average</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary/40"></div>
+</div>
+<!-- Profit Factor -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Profit Factor</span>
+<span class="material-symbols-outlined text-body-md text-secondary">trending_up</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface font-data-mono font-semibold tracking-tight">2.18</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Gross $8.4k / $3.8k</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary/40"></div>
+</div>
+<!-- Win Rate -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Win Rate</span>
+<span class="font-data-mono text-body-sm text-on-surface-variant">61/95</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-on-surface font-data-mono font-semibold tracking-tight">64.2%</div>
+<div class="w-full bg-surface-container-lowest h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 64.2%;"></div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary/40"></div>
+</div>
+<!-- Avg Win / Avg Loss -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Payoff Ratio</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/15 text-primary font-data-mono text-[10px]">1.94:1</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-body-md text-body-md font-data-mono font-semibold text-secondary">+$275.80</div>
+<div class="font-body-md text-body-md font-data-mono font-semibold text-tertiary">-$142.25</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-outline/20"></div>
+</div>
+<!-- Kelly Criterion -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Kelly Criterion</span>
+<span class="material-symbols-outlined text-body-md text-primary">pie_chart</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-primary font-data-mono font-semibold tracking-tight">22.4%</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Full Kelly Cap (1.2% Half)</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary/40"></div>
+</div>
+<!-- MAE -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Max Adverse Excursion</span>
+<span class="material-symbols-outlined text-body-md text-tertiary">arrow_downward</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-tertiary font-data-mono font-semibold tracking-tight">-0.45 R</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Heat tolerance index</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-tertiary/40"></div>
+</div>
+<!-- MFE -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Max Favorable Excursion</span>
+<span class="material-symbols-outlined text-body-md text-secondary">arrow_upward</span>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-lg text-headline-lg text-secondary font-data-mono font-semibold tracking-tight">+2.10 R</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Left on table: 0.16 R</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary/40"></div>
+</div>
+</section>
+<!-- Visual Analytics Bento Grid: Row 1 -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- 1. Cumulative Equity Curve vs Benchmark (Line chart with drawdown shading) (8 Cols) -->
+<div class="xl:col-span-8 bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Cumulative Equity Curve & Benchmark</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-caps text-label-caps">MTD +$4,280</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Realized net P&L trajectories vs S&P 500 Buy & Hold and Max Drawdown envelope.</p>
+</div>
+<!-- Legend and Resolution Toggle -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-sm font-data-mono text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-1.5"><span class="w-3 h-0.5 bg-secondary rounded"></span>Account P&L</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-0.5 bg-primary/60 rounded"></span>SPY Benchmark</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2 bg-tertiary/20 rounded"></span>Drawdown Zone</span>
+</div>
+<div class="bg-surface-container-low p-0.5 rounded-lg flex items-center font-body-sm text-[11px]">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-medium shadow-sm">R-Multiple</button>
+<button class="px-2 py-0.5 text-on-surface-variant hover:text-on-surface">Dollar ($)</button>
+</div>
+</div>
+</div>
+<!-- High Precision SVG Equity Curve Chart -->
+<div class="relative w-full h-72 my-space-xs bg-surface-container-lowest/60 rounded-lg p-space-sm flex flex-col justify-between overflow-hidden">
+<!-- Grid Lines -->
+<div class="absolute inset-x-space-sm inset-y-space-sm pointer-events-none flex flex-col justify-between opacity-15">
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+</div>
+<!-- Chart Graphic -->
+<svg class="w-full h-full relative z-10" fill="none" preserveaspectratio="none" viewbox="0 0 800 240">
+<defs>
+<lineargradient id="equityGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#51de9d" stop-opacity="0.28"></stop>
+<stop offset="100%" stop-color="#51de9d" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="drawdownGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#ffb3b5" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#ffb3b5" stop-opacity="0.02"></stop>
+</lineargradient>
+</defs>
+<!-- Drawdown envelope shading between trades 38 and 54 -->
+<path d="M 290 85 L 340 135 L 380 120 L 420 148 L 460 90 L 460 85 L 290 85 Z" fill="url(#drawdownGrad)"></path>
+<!-- Benchmark Curve (SPY 500) -->
+<path d="M 0 210 Q 150 195 300 170 T 550 145 T 800 120" opacity="0.65" stroke="#8e7fff" stroke-dasharray="3 3" stroke-width="1.8"></path>
+<!-- Realized Equity Fill -->
+<path d="M 0 220 L 60 210 L 120 185 L 180 170 L 240 130 L 290 85 L 340 135 L 380 120 L 420 148 L 470 78 L 540 60 L 610 80 L 680 42 L 740 32 L 800 18 L 800 240 L 0 240 Z" fill="url(#equityGrad)"></path>
+<!-- Realized Equity Line -->
+<path d="M 0 220 L 60 210 L 120 185 L 180 170 L 240 130 L 290 85 L 340 135 L 380 120 L 420 148 L 470 78 L 540 60 L 610 80 L 680 42 L 740 32 L 800 18" stroke="#51de9d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<!-- Milestone Flag Annotations -->
+<!-- Peak 1 -->
+<circle cx="290" cy="85" fill="#51de9d" r="3.5" stroke="#0a0e17" stroke-width="2"></circle>
+<!-- Max Drawdown Trough -->
+<circle cx="420" cy="148" fill="#ea6670" r="4" stroke="#0a0e17" stroke-width="2"></circle>
+<!-- All Time High -->
+<circle cx="800" cy="18" fill="#71fcb8" r="4.5" stroke="#0a0e17" stroke-width="2"></circle>
+</svg>
+<!-- Dynamic Milestone Marker Overlays -->
+<div class="absolute top-10 left-[48%] bg-surface-container-high/90 px-space-xs py-0.5 rounded text-[10px] font-data-mono text-tertiary flex items-center gap-1 shadow-sm">
+<span>Max DD -1.82R</span>
+</div>
+<div class="absolute top-2 right-4 bg-secondary/15 px-space-xs py-0.5 rounded text-[10px] font-data-mono text-secondary flex items-center gap-1 shadow-sm">
+<span>ATH +28.9 R</span>
+</div>
+<!-- Horizontal X-Axis Tick Labels -->
+<div class="flex items-center justify-between text-[11px] font-data-mono text-on-surface-variant/80 pt-1">
+<span>Trade #1</span>
+<span>Trade #20</span>
+<span>Trade #40</span>
+<span>Trade #60</span>
+<span>Trade #80</span>
+<span>Trade #95 (Current)</span>
+</div>
+</div>
+<!-- Quick Metrics Summary Bar Below Chart -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md pt-space-md border-t border-surface-container-high/60 mt-space-sm">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Max Drawdown</span>
+<span class="font-data-mono text-body-md text-tertiary font-semibold">-3.2% (-$1,180)</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Sharpe Ratio</span>
+<span class="font-data-mono text-body-md text-on-surface font-semibold">2.41</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Sortino Ratio</span>
+<span class="font-data-mono text-body-md text-secondary font-semibold">3.88</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Ulcer Index</span>
+<span class="font-data-mono text-body-md text-on-surface font-semibold">0.82 (Minimal Stress)</span>
+</div>
+</div>
+</div>
+<!-- 2. Behavioral Analysis & Trading Discipline (4 Cols) -->
+<div class="xl:col-span-4 bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-body-lg">psychology</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Behavior & Discipline Leak</h2>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-label-caps text-label-caps">Leak: -$1,070</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Statistical proof comparing trades following your trading plan vs impulsive emotional deviances.</p>
+<!-- Rules Followed vs Broken Contrast Block -->
+<div class="mt-space-md space-y-space-sm">
+<!-- Followed Plan -->
+<div class="p-space-sm bg-surface-container-low rounded-lg border-l-4 border-secondary relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-md">verified</span>
+                Followed Plan
+              </span>
+<span class="font-data-mono font-semibold text-secondary text-body-md">+$5,140 Net</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs text-[11px] font-data-mono text-on-surface-variant">
+<span>78 executions (82%)</span>
+<span class="text-secondary font-semibold">72.0% Win Rate</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-2">
+<div class="bg-secondary h-full rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Deviated from Plan -->
+<div class="p-space-sm bg-surface-container-low rounded-lg border-l-4 border-tertiary relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-tertiary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-md">warning</span>
+                Deviated from Plan
+              </span>
+<span class="font-data-mono font-semibold text-tertiary text-body-md">-$860 Net</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs text-[11px] font-data-mono text-on-surface-variant">
+<span>17 executions (18%)</span>
+<span class="text-tertiary font-semibold">28.0% Win Rate</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-2">
+<div class="bg-tertiary h-full rounded-full" style="width: 28%;"></div>
+</div>
+</div>
+</div>
+<!-- Most Costly Mistake Leak Breakdown -->
+<div class="mt-space-md pt-space-sm border-t border-surface-container-high/60">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider block mb-space-xs">
+            Most Costly Psychological Leaks
+          </span>
+<div class="space-y-space-xs">
+<div class="p-space-xs bg-surface-container-lowest/60 rounded flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-tertiary text-body-md">bolt</span>
+<div class="min-w-0">
+<div class="font-body-sm text-body-sm text-on-surface truncate font-medium">FOMO Chased Entry</div>
+<div class="font-data-mono text-[10px] text-on-surface-variant">4 executions • Avg -1.1R</div>
+</div>
+</div>
+<span class="font-data-mono text-body-sm font-semibold text-tertiary">-$620.00</span>
+</div>
+<div class="p-space-xs bg-surface-container-lowest/60 rounded flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-tertiary text-body-md">pan_tool</span>
+<div class="min-w-0">
+<div class="font-body-sm text-body-sm text-on-surface truncate font-medium">Moving Stop Loss (Greed/Fear)</div>
+<div class="font-data-mono text-[10px] text-on-surface-variant">2 executions • Avg -1.6R</div>
+</div>
+</div>
+<span class="font-data-mono text-body-sm font-semibold text-tertiary">-$450.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Cognitive Insight Quote -->
+<div class="mt-space-md p-space-sm bg-primary/10 rounded-lg flex items-start gap-space-xs text-primary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-body-md shrink-0">auto_awesome</span>
+<span>Fixing FOMO entries alone increases your aggregate expectancy by <strong>+18.4%</strong>.</span>
+</div>
+</div>
+</div>
+<!-- Visual Analytics Bento Grid: Row 2 (Sessions + Heatmap) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- 3. Performance by Trading Session (5 Cols) -->
+<div class="xl:col-span-5 bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Session Timing Efficiency</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Edge distribution mapped across macro liquidity windows.</p>
+</div>
+<span class="material-symbols-outlined text-primary">schedule</span>
+</div>
+<div class="space-y-space-sm mt-space-md">
+<!-- London Open -->
+<div class="p-space-sm bg-surface-container-low rounded-lg relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md font-semibold text-on-surface">London Open</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps">Most Consistent</span>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface-variant">07:00 – 11:00 UTC • Liquidity sweeps</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono text-body-lg font-semibold text-secondary">+$2,100</span>
+<span class="block font-data-mono text-[11px] text-on-surface-variant">69% WR • 2.1R avg</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-space-sm">
+<div class="bg-secondary h-full rounded-full" style="width: 69%;"></div>
+</div>
+</div>
+<!-- New York Open -->
+<div class="p-space-sm bg-surface-container-low rounded-lg relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md font-semibold text-on-surface">New York Open</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/15 text-primary font-label-caps text-label-caps">High Volume</span>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface-variant">13:00 – 17:00 UTC • CPI/FOMC impulses</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono text-body-lg font-semibold text-secondary">+$1,980</span>
+<span class="block font-data-mono text-[11px] text-on-surface-variant">64% WR • 1.8R avg</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-space-sm">
+<div class="bg-primary h-full rounded-full" style="width: 64%;"></div>
+</div>
+</div>
+<!-- Asian Session -->
+<div class="p-space-sm bg-surface-container-low rounded-lg relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Asian Session</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/15 text-tertiary font-label-caps text-label-caps">Low Edge Alert</span>
+</div>
+<span class="font-data-mono text-[11px] text-on-surface-variant">00:00 – 06:00 UTC • Range-bound drift</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono text-body-lg font-semibold text-on-surface">+$200</span>
+<span class="block font-data-mono text-[11px] text-tertiary">42% WR • 0.8R avg</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full mt-space-sm">
+<div class="bg-tertiary h-full rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-lowest/80 rounded-lg flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant font-data-mono">
+<span>Session Delta Advantage:</span>
+<span class="text-secondary font-semibold">London + NY = 95.3% Total Profit</span>
+</div>
+</div>
+<!-- 4. Day of the Week & Hour of Day Heatmap (7 Cols) -->
+<div class="xl:col-span-7 bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Day & Hour Execution Matrix</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Intensity mapped by cumulative net R-Multiple generation.</p>
+</div>
+<!-- Heatmap Legend -->
+<div class="flex items-center gap-1.5 font-data-mono text-[10px] text-on-surface-variant">
+<span>Loss</span>
+<span class="w-3 h-3 rounded-sm bg-tertiary/40"></span>
+<span class="w-3 h-3 rounded-sm bg-surface-container-high"></span>
+<span class="w-3 h-3 rounded-sm bg-secondary/30"></span>
+<span class="w-3 h-3 rounded-sm bg-secondary/60"></span>
+<span class="w-3 h-3 rounded-sm bg-secondary"></span>
+<span>Heavy Win</span>
+</div>
+</div>
+<!-- Heatmap Grid Container -->
+<div class="overflow-x-auto mt-space-md">
+<div class="min-w-[480px]">
+<!-- Hours Header -->
+<div class="grid grid-cols-9 gap-1 text-[11px] font-data-mono text-on-surface-variant text-center pb-2">
+<span class="text-left font-semibold">DAY</span>
+<span>08:00</span>
+<span>09:00</span>
+<span>10:00</span>
+<span>13:00</span>
+<span>14:00</span>
+<span>15:00</span>
+<span>16:00</span>
+<span>19:00</span>
+</div>
+<!-- Monday -->
+<div class="grid grid-cols-9 gap-1 items-center mb-1 text-[11px] font-data-mono">
+<span class="text-on-surface-variant font-medium">Mon</span>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-secondary/30 text-secondary flex items-center justify-center font-semibold text-[10px]">+0.8R</div>
+<div class="h-8 rounded bg-secondary/60 text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+1.4R</div>
+<div class="h-8 rounded bg-tertiary/30 text-tertiary flex items-center justify-center font-semibold text-[10px]">-0.6R</div>
+<div class="h-8 rounded bg-secondary/30 text-secondary flex items-center justify-center font-semibold text-[10px]">+0.5R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-tertiary/40 text-tertiary flex items-center justify-center font-bold text-[10px]">-1.0R</div>
+</div>
+<!-- Tuesday (Peak day) -->
+<div class="grid grid-cols-9 gap-1 items-center mb-1 text-[11px] font-data-mono">
+<span class="text-on-surface font-semibold text-secondary">Tue ★</span>
+<div class="h-8 rounded bg-secondary/30 text-secondary flex items-center justify-center font-semibold text-[10px]">+0.7R</div>
+<div class="h-8 rounded bg-secondary text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+3.2R</div>
+<div class="h-8 rounded bg-secondary/70 text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+1.9R</div>
+<div class="h-8 rounded bg-secondary/60 text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+1.5R</div>
+<div class="h-8 rounded bg-secondary text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+2.8R</div>
+<div class="h-8 rounded bg-secondary/30 text-secondary flex items-center justify-center font-semibold text-[10px]">+0.9R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+</div>
+<!-- Wednesday -->
+<div class="grid grid-cols-9 gap-1 items-center mb-1 text-[11px] font-data-mono">
+<span class="text-on-surface-variant font-medium">Wed</span>
+<div class="h-8 rounded bg-tertiary/40 text-tertiary flex items-center justify-center font-bold text-[10px]">-1.0R</div>
+<div class="h-8 rounded bg-secondary/30 text-secondary flex items-center justify-center font-semibold text-[10px]">+0.6R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-secondary/60 text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+1.8R</div>
+<div class="h-8 rounded bg-tertiary/30 text-tertiary flex items-center justify-center font-semibold text-[10px]">-0.5R</div>
+<div class="h-8 rounded bg-secondary/30 text-secondary flex items-center justify-center font-semibold text-[10px]">+0.4R</div>
+<div class="h-8 rounded bg-tertiary/20 text-tertiary flex items-center justify-center text-[10px]">-0.2R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+</div>
+<!-- Thursday (Peak day) -->
+<div class="grid grid-cols-9 gap-1 items-center mb-1 text-[11px] font-data-mono">
+<span class="text-on-surface font-semibold text-secondary">Thu ★</span>
+<div class="h-8 rounded bg-secondary/60 text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+1.6R</div>
+<div class="h-8 rounded bg-secondary text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+2.9R</div>
+<div class="h-8 rounded bg-secondary/60 text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+1.7R</div>
+<div class="h-8 rounded bg-secondary/30 text-secondary flex items-center justify-center font-semibold text-[10px]">+0.8R</div>
+<div class="h-8 rounded bg-secondary/70 text-surface-container-lowest flex items-center justify-center font-bold text-[10px]">+2.1R</div>
+<div class="h-8 rounded bg-secondary/30 text-secondary flex items-center justify-center font-semibold text-[10px]">+0.7R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+</div>
+<!-- Friday -->
+<div class="grid grid-cols-9 gap-1 items-center mb-1 text-[11px] font-data-mono">
+<span class="text-on-surface-variant font-medium">Fri</span>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-secondary/30 text-secondary flex items-center justify-center font-semibold text-[10px]">+0.4R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-tertiary/40 text-tertiary flex items-center justify-center font-bold text-[10px]">-1.2R</div>
+<div class="h-8 rounded bg-tertiary/30 text-tertiary flex items-center justify-center font-semibold text-[10px]">-0.7R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+<div class="h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant text-[10px]">0.0R</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-high/60 flex flex-wrap items-center justify-between text-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs font-semibold text-secondary">
+<span class="material-symbols-outlined text-body-md">thumb_up</span>
+<span>Tuesday & Thursday generate 64.8% of aggregate quarterly gains.</span>
+</div>
+<span class="font-data-mono text-tertiary">Avoid Friday PM Sessions (-1.9R drag)</span>
+</div>
+</div>
+</div>
+<!-- Visual Analytics Bento Grid: Row 3 (Symbol Breakdown & Holding Time) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- 5. Symbol & Direction Breakdown (7 Cols) -->
+<div class="xl:col-span-7 bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Symbol & Direction Breakdown</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bi-directional win rate asymmetries across primary traded assets.</p>
+</div>
+<span class="material-symbols-outlined text-primary">pie_chart</span>
+</div>
+<!-- Matrix Bars -->
+<div class="space-y-space-md mt-space-md">
+<!-- XAUUSD Asset Row -->
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-data-mono">XAUUSD</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(Gold / US Dollar Spot)</span>
+</div>
+<span class="font-data-mono font-semibold text-secondary text-body-md">+$2,840 Total P&L</span>
+</div>
+<!-- Direction Split Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Longs -->
+<div class="bg-surface-container p-space-sm rounded">
+<div class="flex items-center justify-between text-[11px] font-data-mono">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">arrow_upward</span> LONGS (40 trades)
+                  </span>
+<span class="text-on-surface font-bold text-body-sm">75.0% WR</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 75%;"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] font-data-mono text-on-surface-variant mt-1.5">
+<span>Avg R: +2.35</span>
+<span class="text-secondary">+$2,110</span>
+</div>
+</div>
+<!-- Shorts -->
+<div class="bg-surface-container p-space-sm rounded">
+<div class="flex items-center justify-between text-[11px] font-data-mono">
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">arrow_downward</span> SHORTS (20 trades)
+                  </span>
+<span class="text-on-surface font-bold text-body-sm">60.0% WR</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 60%;"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] font-data-mono text-on-surface-variant mt-1.5">
+<span>Avg R: +1.40</span>
+<span class="text-secondary">+$730</span>
+</div>
+</div>
+</div>
+</div>
+<!-- NAS100 Asset Row -->
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed-dim"></span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-data-mono">NAS100 / NQ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(Nasdaq 100 Index)</span>
+</div>
+<span class="font-data-mono font-semibold text-secondary text-body-md">+$1,440 Total P&L</span>
+</div>
+<!-- Direction Split Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Longs (Drag) -->
+<div class="bg-surface-container p-space-sm rounded">
+<div class="flex items-center justify-between text-[11px] font-data-mono">
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">arrow_upward</span> LONGS (15 trades)
+                  </span>
+<span class="text-on-surface font-bold text-body-sm">45.0% WR</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 45%;"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] font-data-mono text-on-surface-variant mt-1.5">
+<span>Avg R: -0.20</span>
+<span class="text-tertiary">-$180</span>
+</div>
+</div>
+<!-- Shorts (Dominant Edge) -->
+<div class="bg-surface-container p-space-sm rounded">
+<div class="flex items-center justify-between text-[11px] font-data-mono">
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">arrow_downward</span> SHORTS (20 trades)
+                  </span>
+<span class="text-on-surface font-bold text-body-sm">80.0% WR</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 80%;"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] font-data-mono text-on-surface-variant mt-1.5">
+<span>Avg R: +2.60</span>
+<span class="text-secondary">+$1,620</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-surface-container-high/60 flex items-center justify-between text-body-sm text-body-sm text-on-surface-variant">
+<span class="font-data-mono">Edge Insight:</span>
+<span class="text-primary font-medium">Overwhelming Short bias edge on NAS100 (+80% WR) during expansion leg reversals.</span>
+</div>
+</div>
+<!-- 6. Trade Holding Time Distribution (5 Cols) -->
+<div class="xl:col-span-5 bg-surface-container rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Holding Duration & Horizon</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Attribution by duration in trade exposure.</p>
+</div>
+<span class="material-symbols-outlined text-primary">timer</span>
+</div>
+<!-- SVG Distribution Pillar Chart -->
+<div class="my-space-md p-space-sm bg-surface-container-lowest/60 rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between text-label-caps text-label-caps text-on-surface-variant font-data-mono uppercase mb-2">
+<span>Duration Horizon</span>
+<span>Net Return ($)</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Scalps -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm text-body-sm">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="w-2 h-2 rounded bg-outline"></span>
+                  Scalps (< 30 min)
+                </span>
+<span class="font-data-mono font-semibold text-secondary">+$820.00</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 26%;"></div>
+</div>
+<div class="flex justify-between text-[11px] font-data-mono text-on-surface-variant">
+<span>32 Trades logged</span>
+<span>Win Rate: 56.2%</span>
+</div>
+</div>
+<!-- Day Trades (Sweet spot highlighted) -->
+<div class="p-space-xs bg-secondary/10 rounded-lg space-y-1">
+<div class="flex items-center justify-between text-body-sm text-body-sm">
+<span class="text-secondary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm">stars</span>
+                  Day Trades (30 min – 4 hrs)
+                  <span class="px-1.5 py-0.5 rounded bg-secondary/20 text-secondary font-label-caps text-[9px]">SWEET SPOT</span>
+</span>
+<span class="font-data-mono font-bold text-secondary text-body-md">+$3,120.00</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%;"></div>
+</div>
+<div class="flex justify-between text-[11px] font-data-mono text-secondary/80">
+<span>48 Trades logged</span>
+<span class="font-semibold">Win Rate: 71.8% • 2.3 R avg</span>
+</div>
+</div>
+<!-- Swings -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm text-body-sm">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="w-2 h-2 rounded bg-primary"></span>
+                  Swings (> 4 hrs)
+                </span>
+<span class="font-data-mono font-semibold text-secondary">+$340.00</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 11%;"></div>
+</div>
+<div class="flex justify-between text-[11px] font-data-mono text-on-surface-variant">
+<span>15 Trades logged</span>
+<span>Win Rate: 53.3%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tactical Verdict Bar -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Optimal Holding Sweet Spot:</span>
+<span class="font-data-mono font-semibold text-secondary">74 to 160 minutes</span>
+</div>
+</div>
+</div>
+<!-- Detailed Attribution Ledger Snippet & Interactive Audit Drawer -->
+<section class="bg-surface-container rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md border-b border-surface-container-high/60">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Statistical Outlier Ledger</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recent trades exceeding ±2.5 R standard deviation limits or registered as behavioral infractions.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-body-sm text-body-sm rounded-lg flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-body-sm">filter_list</span>
+<span>Outliers Only</span>
+</button>
+<button class="h-8 px-space-sm bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-body-sm text-body-sm rounded-lg flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-body-sm">download</span>
+<span>CSV Raw</span>
+</button>
+</div>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider border-b border-surface-container-high/60">
+<th class="py-space-sm px-space-xs font-semibold">TICKET ID</th>
+<th class="py-space-sm px-space-xs font-semibold">TICKER & DIR</th>
+<th class="py-space-sm px-space-xs font-semibold">SESSION</th>
+<th class="py-space-sm px-space-xs font-semibold">DURATION</th>
+<th class="py-space-sm px-space-xs font-semibold">RULES</th>
+<th class="py-space-sm px-space-xs font-semibold text-right">MAE / MFE</th>
+<th class="py-space-sm px-space-xs font-semibold text-right">R-MULTIPLE</th>
+<th class="py-space-sm px-space-xs font-semibold text-right">NET P&L</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-2.5 px-space-xs font-data-mono text-on-surface-variant">#98412</td>
+<td class="py-2.5 px-space-xs font-data-mono">
+<span class="font-semibold text-on-surface">XAUUSD</span>
+<span class="ml-1.5 px-1 py-0.5 rounded bg-secondary/15 text-secondary text-[10px] font-bold">LONG</span>
+</td>
+<td class="py-2.5 px-space-xs text-on-surface">London Open</td>
+<td class="py-2.5 px-space-xs font-data-mono text-on-surface-variant">1h 14m</td>
+<td class="py-2.5 px-space-xs">
+<span class="inline-flex items-center gap-1 text-secondary text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Followed
+              </span>
+</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right text-on-surface-variant">-0.12R / +3.42R</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right font-semibold text-secondary">+3.40 R</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right font-semibold text-secondary">+$510.00</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-2.5 px-space-xs font-data-mono text-on-surface-variant">#98389</td>
+<td class="py-2.5 px-space-xs font-data-mono">
+<span class="font-semibold text-on-surface">NAS100</span>
+<span class="ml-1.5 px-1 py-0.5 rounded bg-primary/15 text-primary text-[10px] font-bold">SHORT</span>
+</td>
+<td class="py-2.5 px-space-xs text-on-surface">New York Open</td>
+<td class="py-2.5 px-space-xs font-data-mono text-on-surface-variant">42m</td>
+<td class="py-2.5 px-space-xs">
+<span class="inline-flex items-center gap-1 text-secondary text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Followed
+              </span>
+</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right text-on-surface-variant">-0.24R / +2.90R</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right font-semibold text-secondary">+2.85 R</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right font-semibold text-secondary">+$427.50</td>
+</tr>
+<!-- Row 3 (Infraction) -->
+<tr class="hover:bg-surface-container-high/50 transition-colors bg-tertiary/5">
+<td class="py-2.5 px-space-xs font-data-mono text-tertiary">#98365</td>
+<td class="py-2.5 px-space-xs font-data-mono">
+<span class="font-semibold text-on-surface">XAUUSD</span>
+<span class="ml-1.5 px-1 py-0.5 rounded bg-secondary/15 text-secondary text-[10px] font-bold">LONG</span>
+</td>
+<td class="py-2.5 px-space-xs text-on-surface">Asian Range</td>
+<td class="py-2.5 px-space-xs font-data-mono text-on-surface-variant">12m</td>
+<td class="py-2.5 px-space-xs">
+<span class="inline-flex items-center gap-1 text-tertiary text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]">warning</span> FOMO Chased
+              </span>
+</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right text-on-surface-variant">-1.45R / +0.10R</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right font-semibold text-tertiary">-1.45 R</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right font-semibold text-tertiary">-$217.50</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-2.5 px-space-xs font-data-mono text-on-surface-variant">#98310</td>
+<td class="py-2.5 px-space-xs font-data-mono">
+<span class="font-semibold text-on-surface">NAS100</span>
+<span class="ml-1.5 px-1 py-0.5 rounded bg-primary/15 text-primary text-[10px] font-bold">SHORT</span>
+</td>
+<td class="py-2.5 px-space-xs text-on-surface">New York Open</td>
+<td class="py-2.5 px-space-xs font-data-mono text-on-surface-variant">2h 18m</td>
+<td class="py-2.5 px-space-xs">
+<span class="inline-flex items-center gap-1 text-secondary text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Followed
+              </span>
+</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right text-on-surface-variant">-0.35R / +2.15R</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right font-semibold text-secondary">+2.10 R</td>
+<td class="py-2.5 px-space-xs font-data-mono text-right font-semibold text-secondary">+$315.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Audit Meta -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-md border-t border-surface-container-high/60 text-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Statistical engine synced with MetaTrader 5 live log feed.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span>Displaying 4 of 95 trades</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container-high text-on-surface transition-colors">View All Trades in Journal</button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

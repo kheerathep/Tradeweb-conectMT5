@@ -1,0 +1,31 @@
+CREATE TABLE mt5_integrations (
+    id                      BIGINT          AUTO_INCREMENT PRIMARY KEY,
+    trading_account_id      BIGINT          NOT NULL,
+    token_hash              VARCHAR(64)     NOT NULL COMMENT 'SHA-256 hash of integration token',
+    token_prefix            VARCHAR(8)      NOT NULL COMMENT 'First 8 chars for identification',
+    connection_status       ENUM('NOT_CONNECTED','PENDING','CONNECTED','SYNCING','ERROR','DISCONNECTED') 
+                            NOT NULL DEFAULT 'PENDING',
+    mt5_login_encrypted     VARCHAR(512)    COMMENT 'AES-256 encrypted MT5 login',
+    mt5_account_name        VARCHAR(200),
+    mt5_company             VARCHAR(200),
+    mt5_server              VARCHAR(200),
+    mt5_currency            VARCHAR(10),
+    mt5_balance             DECIMAL(18,2),
+    mt5_equity              DECIMAL(18,2),
+    last_heartbeat_at       TIMESTAMP       NULL,
+    last_sync_success_at    TIMESTAMP       NULL,
+    last_sync_error_at      TIMESTAMP       NULL,
+    last_error_message      TEXT,
+    total_deals_imported    BIGINT          DEFAULT 0,
+    total_trades_normalized BIGINT          DEFAULT 0,
+    sync_checkpoint         TIMESTAMP       NULL,
+    token_created_at        TIMESTAMP       NOT NULL,
+    token_revoked_at        TIMESTAMP       NULL,
+    created_at              TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at              TIMESTAMP       NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    
+    CONSTRAINT fk_integrations_account FOREIGN KEY (trading_account_id) REFERENCES trading_accounts(id),
+    CONSTRAINT uk_integrations_account UNIQUE (trading_account_id),
+    INDEX idx_integrations_status (connection_status),
+    INDEX idx_integrations_token_hash (token_hash)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

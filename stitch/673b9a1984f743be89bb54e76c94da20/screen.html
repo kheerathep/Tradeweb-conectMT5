@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#dfe2ef","on-tertiary-fixed-variant":"#881c2c","on-primary":"#2a039d","surface-container-lowest":"#0a0e17","surface-bright":"#353943","primary":"#c7bfff","on-secondary":"#003822","on-secondary-fixed":"#002112","surface":"#0f131c","inverse-on-surface":"#2c303a","background":"#0f131c","on-error":"#690005","on-background":"#dfe2ef","on-error-container":"#ffdad6","surface-container-low":"#181c25","secondary":"#51de9d","surface-dim":"#0f131c","surface-container":"#1c2029","surface-variant":"#31353f","error":"#ffb4ab","primary-fixed-dim":"#c7bfff","tertiary-fixed":"#ffdada","on-tertiary-container":"#5b0014","outline":"#928f9f","inverse-primary":"#5a49cb","surface-container-highest":"#31353f","tertiary":"#ffb3b5","on-secondary-fixed-variant":"#005234","surface-tint":"#c7bfff","error-container":"#93000a","tertiary-container":"#ea6670","tertiary-fixed-dim":"#ffb3b5","on-primary-fixed":"#170065","surface-container-high":"#262a33","secondary-fixed":"#71fcb8","primary-container":"#8e7fff","inverse-surface":"#dfe2ef","on-secondary-container":"#003b24","on-tertiary-fixed":"#40000b","primary-fixed":"#e4dfff","on-tertiary":"#680018","on-primary-fixed-variant":"#422db2","outline-variant":"#474554","on-primary-container":"#24008c","on-surface-variant":"#c8c4d6","secondary-fixed-dim":"#51de9d","secondary-container":"#00b175"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","margin":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","gutter-desktop":"1.25rem","margin-tablet":"1.5rem","space-lg":"1rem","space-md":"0.75rem","gutter":"1rem","margin-desktop":"2rem"},fontFamily:{"headline-lg":["Inter"],"metric-display":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-xl-mobile":["Inter"],"body-md":["Inter"],"data-mono":["JetBrains Mono"],"headline-xl":["Inter"],"headline-sm":["Inter"],"label-caps":["Inter"]},fontSize:{"headline-lg":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.02em","fontWeight":"600"}],"metric-display":["1.75rem",{"lineHeight":"2rem","letterSpacing":"-0.03em","fontWeight":"600"}],"body-lg":["1rem",{"lineHeight":"1.5rem","letterSpacing":"0","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.01em","fontWeight":"400"}],"headline-xl-mobile":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"-0.02em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0","fontWeight":"400"}],"data-mono":["0.8125rem",{"lineHeight":"1.125rem","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.025em","fontWeight":"600"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.06em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-lg flex items-center gap-space-sm border-b border-outline-variant/20 shrink-0"><img alt="TradeFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XT14wmwir-16iJY6uGQbqpQ9GRWdUPnk8rP5DkBygiVc5Qew3tg1A8MFFgzdjtgOg8h3zBBpE2L8CFZY1hevUnyrt2TDHo-wluqXco-oA8YtAm1rlNLDs_k2BfW0uXUqrunla0sPKgUS_Ec8vxs-h_yV7E1i0AN_tIDyahT8K8AoVK7AjAaHQzUDKH7ZI0RzUPnzPoLLsbmJtyRF4LtKd-edGgtFWF2GlPTKhSsm5-qmdQ-XfzsMAQrnc"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">TradeFlow</span></div><div class="p-space-sm shrink-0"><div class="p-space-sm bg-surface-container-low rounded-lg border border-outline-variant/30 cursor-pointer hover:border-outline/50 transition-colors"><div class="flex items-center justify-between mb-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="font-body-sm text-body-sm text-on-surface truncate font-semibold">Apex 100k Funded</span></div><span class="material-symbols-outlined text-body-sm text-on-surface-variant">unfold_more</span></div><div class="flex items-center justify-between text-on-surface-variant font-data-mono text-data-mono"><span>#40921</span><span class="text-secondary font-semibold">$104,280.50</span></div></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-xs"><nav class="space-y-space-md" data-active-classes="bg-surface-container-high text-primary font-semibold"><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">OVERVIEW</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-body-lg">dashboard</span><span>Dashboard</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">TRADING</div><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-surface-container-high text-primary font-semibold" data-path="trade-journal" href="#"><span class="material-symbols-outlined text-body-lg">menu_book</span><span>Trade Journal</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="accounts" href="#"><span class="material-symbols-outlined text-body-lg">account_balance</span><span>Accounts</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-body-lg">show_chart</span><span>Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="strategies" href="#"><span class="material-symbols-outlined text-body-lg">ads_click</span><span>Strategies</span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">INTEGRATIONS</div><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="mt5-connections" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-body-lg">sync</span><span>MT5 Connections</span></div><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span></a></div><div class="space-y-space-xs"><div class="px-space-sm py-space-xs font-label-caps text-label-caps text-on-surface-variant/70 uppercase tracking-wider">PREFERENCES</div><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-body-lg">settings</span><span>Settings</span></a></div></nav></div></div><div class="p-space-sm border-t border-outline-variant/20 shrink-0 space-y-space-xs"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="documentation" href="#"><span class="material-symbols-outlined text-body-lg">description</span><span>Documentation</span></a><div class="p-space-sm bg-surface-container-low rounded-lg border border-outline-variant/30 flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8gBxET52tjBg5t6lNkYa6E0K3p9YHTdE6E2SKJhtkJeoADOg3MoCyiexHCNZYtPDq3jE00xznKcNLAmnRdVBZiAbVaJkY7Q3Tjm_cwaCASRhDg3kNH-rcLtDff-GooM4qG8BIMXaUzLCdHKjsEPFRn9W6onITdcUaiRHv0x0Wqa8G6KfAz5lb5r6iGkwrjkalMw5qw9er-ZkT_mExzbp5-Z_Gn9Ohd_GW1yYOnJ3fDB4pQY1FCt69"/><div class="min-w-0"><div class="font-body-md text-body-md text-on-surface font-semibold truncate">Alex Chen</div><div class="font-body-sm text-body-sm text-on-surface-variant truncate">alex@tradeflow.io</div></div></div><span class="px-space-xs py-0.5 rounded bg-secondary/15 text-secondary border border-secondary/30 font-label-caps text-label-caps shrink-0">PRO</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest/85 backdrop-blur-xl border-b border-outline-variant/30 z-40 px-gutter-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-body-md">terminal</span><span>Terminal</span><span class="text-outline">/</span><span class="text-on-surface font-medium">Live Analytics</span></div><div class="relative flex items-center"><span class="material-symbols-outlined text-body-md text-outline absolute left-space-sm pointer-events-none">search</span><input class="h-8 pl-8 pr-12 bg-surface-container-low rounded-lg border border-outline-variant/40 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary w-64 transition-all" placeholder="Search ticker, journal, tag..." type="text"/><kbd class="absolute right-space-xs px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded border border-outline-variant/30 font-data-mono text-[10px]">⌘K</kbd></div></div><div class="flex items-center gap-space-sm"><button class="h-8 px-space-md rounded-lg bg-surface-container border border-outline-variant/40 hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-space-xs transition-colors" type="button"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Sync MT5</span></button><button class="h-8 px-space-md rounded-lg bg-primary text-on-primary font-body-sm text-body-sm font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center gap-space-xs" type="button"><span class="material-symbols-outlined text-body-md">add</span><span>Log Trade</span></button><div class="h-4 w-px bg-outline-variant/40 mx-space-xs"></div><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-headline-sm">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 ring-1 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8gBxET52tjBg5t6lNkYa6E0K3p9YHTdE6E2SKJhtkJeoADOg3MoCyiexHCNZYtPDq3jE00xznKcNLAmnRdVBZiAbVaJkY7Q3Tjm_cwaCASRhDg3kNH-rcLtDff-GooM4qG8BIMXaUzLCdHKjsEPFRn9W6onITdcUaiRHv0x0Wqa8G6KfAz5lb5r6iGkwrjkalMw5qw9er-ZkT_mExzbp5-Z_Gn9Ohd_GW1yYOnJ3fDB4pQY1FCt69"/></div></header><main class="w-full pt-16 bg-background px-gutter-desktop min-h-screen"><div class="flex flex-col w-full pb-16">
+<!-- Top Ambient Glow -->
+<div class="relative w-full">
+<div class="absolute -top-6 left-1/4 w-96 h-32 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-4 right-1/4 w-80 h-28 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header Section -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg pt-space-lg pb-space-xl">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<span class="inline-flex w-2 h-2 rounded-full bg-secondary"></span>
+<span>Journal Execution Engine</span>
+<span class="text-outline">/</span>
+<span class="text-primary font-semibold">Ledger v4.2</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Trade Journal</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+          Review, organize, and extract statistical edge from every completed execution.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-semibold flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-body-md text-on-surface-variant">file_download</span>
+<span>Export Filtered (.CSV)</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-body-sm text-body-sm font-semibold flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-body-md text-on-surface-variant">upload_file</span>
+<span>Import CSV / MT5 Deals</span>
+</button>
+<button class="h-9 px-space-lg rounded-lg bg-primary hover:bg-primary-fixed-dim text-on-primary font-body-sm text-body-sm font-semibold flex items-center gap-space-xs shadow-md shadow-primary/20 transition-all hover:scale-[1.01] active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-body-lg">add_circle</span>
+<span>Log Manual Trade</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Filter & Parameter Toolbar -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm mb-space-lg space-y-space-md">
+<!-- Primary Search & View Mode Row -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Search Field -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined text-body-lg text-outline absolute left-space-md top-1/2 -translate-y-1/2 pointer-events-none">search</span>
+<input class="w-full h-10 pl-10 pr-12 bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm rounded-lg outline-none focus:bg-surface-container-low transition-all" id="journalSearchInput" placeholder="Search by symbol, tags, setup or notes..." type="text"/>
+<div class="absolute right-space-sm top-1/2 -translate-y-1/2 flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded font-data-mono text-[11px]">↵</kbd>
+<kbd class="px-1.5 py-0.5 bg-surface-container text-on-surface-variant rounded font-data-mono text-[11px]">/</kbd>
+</div>
+</div>
+<!-- Quick Toggles -->
+<div class="flex items-center gap-space-sm self-end lg:self-auto">
+<!-- View Mode Segmented Control -->
+<div class="bg-surface-container-lowest p-1 rounded-lg flex items-center gap-1">
+<button class="px-space-md py-1 rounded bg-surface-container-high text-primary font-body-sm text-body-sm font-semibold flex items-center gap-space-xs transition-colors shadow-sm" id="viewBtnTable" type="button">
+<span class="material-symbols-outlined text-body-md">table_chart</span>
+<span class="hidden sm:inline">Table View</span>
+</button>
+<button class="px-space-md py-1 rounded text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm flex items-center gap-space-xs transition-colors" id="viewBtnCards" type="button">
+<span class="material-symbols-outlined text-body-md">grid_view</span>
+<span class="hidden sm:inline">Visual Cards</span>
+</button>
+</div>
+<button class="h-9 w-9 flex items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Column Visibility" type="button">
+<span class="material-symbols-outlined text-body-lg">view_column</span>
+</button>
+</div>
+</div>
+<!-- Filter Multi-Select Strip -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-sm pt-space-xs">
+<!-- Account Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant/80 px-1">Account</label>
+<div class="relative">
+<select class="w-full h-8 px-space-sm pr-7 bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm appearance-none outline-none cursor-pointer focus:bg-surface-container-low transition-colors">
+<option selected="">Apex 100k (#40921)</option>
+<option>FTMO Master (#10893)</option>
+<option>Topstep 50k (#77218)</option>
+<option>All Accounts (Consolidated)</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">expand_more</span>
+</div>
+</div>
+<!-- Date Range Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant/80 px-1">Date Range</label>
+<div class="relative">
+<select class="w-full h-8 px-space-sm pr-7 bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm appearance-none outline-none cursor-pointer focus:bg-surface-container-low transition-colors">
+<option selected="">Last 30 Days (Oct 1 - 31)</option>
+<option>Current Week (Oct 21 - 27)</option>
+<option>Q3 Quarterly Run</option>
+<option>Year to Date 2024</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">calendar_today</span>
+</div>
+</div>
+<!-- Side Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant/80 px-1">Direction</label>
+<div class="relative">
+<select class="w-full h-8 px-space-sm pr-7 bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm appearance-none outline-none cursor-pointer focus:bg-surface-container-low transition-colors">
+<option selected="">All Sides (Long & Short)</option>
+<option>Long (BUY Only)</option>
+<option>Short (SELL Only)</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">swap_vert</span>
+</div>
+</div>
+<!-- Strategy Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant/80 px-1">Strategy Setup</label>
+<div class="relative">
+<select class="w-full h-8 px-space-sm pr-7 bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm appearance-none outline-none cursor-pointer focus:bg-surface-container-low transition-colors">
+<option selected="">All Setups (FVG, Sweep...)</option>
+<option>FVG Breakout</option>
+<option>Liquidity Sweep Reversal</option>
+<option>OTE 62% Retracement</option>
+<option>London Killzone Momentum</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">psychology</span>
+</div>
+</div>
+<!-- Result Filter -->
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant/80 px-1">Outcome</label>
+<div class="relative">
+<select class="w-full h-8 px-space-sm pr-7 bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm appearance-none outline-none cursor-pointer focus:bg-surface-container-low transition-colors">
+<option selected="">All Results (W / L / BE)</option>
+<option>Winners Only (> 0)</option>
+<option>Losses Only (< 0)</option>
+<option>Scratch / Breakeven ($0)</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">pie_chart</span>
+</div>
+</div>
+<!-- Session Filter -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between px-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant/80">Session</label>
+<button class="text-[10px] text-primary hover:underline" type="button">Reset</button>
+</div>
+<div class="relative">
+<select class="w-full h-8 px-space-sm pr-7 bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm appearance-none outline-none cursor-pointer focus:bg-surface-container-low transition-colors">
+<option selected="">All Market Hours</option>
+<option>New York Open (09:30 - 11:30)</option>
+<option>London Open (03:00 - 05:00)</option>
+<option>Asian Session</option>
+</select>
+<span class="material-symbols-outlined text-body-sm text-on-surface-variant pointer-events-none absolute right-2 top-1/2 -translate-y-1/2">schedule</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Strip: Auto-calculating Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Metric 1: Filtered Trades -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Filtered Executions</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-data-mono text-data-mono">Active Set</span>
+</div>
+<div class="flex items-baseline justify-between mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight">70</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">trades recorded</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono text-data-mono text-secondary">2.3 trades/day</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden mt-space-sm">
+<div class="bg-primary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Metric 2: Net Realized P&L -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Net Realized P&L</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps">PROFITABLE</span>
+</div>
+<div class="flex items-baseline justify-between mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-secondary font-semibold tracking-tight">+$4,280.50</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono text-data-mono text-secondary">+4.28% ROI</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-body-md text-secondary">trending_up</span>
+<span>Profit factor: <strong class="text-on-surface font-semibold font-data-mono">2.14</strong></span>
+</div>
+</div>
+<!-- Metric 3: Win Rate -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Filtered Win Rate</span>
+<span class="font-data-mono text-data-mono text-on-surface-variant">45W / 25L / 0BE</span>
+</div>
+<div class="flex items-baseline justify-between mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-semibold">64.2%</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">Above Expectancy</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden mt-space-sm flex">
+<div class="bg-secondary h-full" style="width: 64.2%"></div>
+<div class="bg-error h-full" style="width: 35.8%"></div>
+</div>
+</div>
+<!-- Metric 4: R-Multiple & Risk -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Avg R-Multiple</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total Risk: $15,200</span>
+</div>
+<div class="flex items-baseline justify-between mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-secondary font-semibold tracking-tight">+1.65 R</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ trade</span>
+</div>
+<div class="text-right">
+<span class="font-data-mono text-data-mono text-on-surface-variant">Avg Win: +2.4R</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm mt-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-body-md text-primary">verified_user</span>
+<span>Avg Drawdown: <strong class="text-error font-semibold font-data-mono">-0.92 R</strong></span>
+</div>
+</div>
+</div>
+<!-- TABLE CONTAINER (Default View) -->
+<div class="bg-surface-container rounded-xl shadow-md overflow-hidden flex flex-col" id="tableViewWrapper">
+<!-- Quick Table Sub-bar -->
+<div class="px-space-md py-space-sm bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-wider">Live Position Ledger</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-data-mono text-[11px] text-on-surface-variant">Synced with MetaTrader 5 • Terminal #1149</span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<button class="hover:text-on-surface flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-body-md">density_small</span>
+<span>Density</span>
+</button>
+<button class="hover:text-on-surface flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-body-md">tune</span>
+<span>Sort By: Date (Desc)</span>
+</button>
+</div>
+</div>
+<!-- Data Table Scroll Canvas -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse select-text">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<th class="py-space-sm pl-space-md pr-space-xs font-semibold">Date & Time</th>
+<th class="py-space-sm px-space-xs font-semibold">Symbol</th>
+<th class="py-space-sm px-space-xs font-semibold">Side</th>
+<th class="py-space-sm px-space-xs font-semibold text-right">Volume</th>
+<th class="py-space-sm px-space-xs font-semibold text-right">Entry</th>
+<th class="py-space-sm px-space-xs font-semibold text-right">Exit</th>
+<th class="py-space-sm px-space-xs font-semibold text-right">Net P&L</th>
+<th class="py-space-sm px-space-xs font-semibold text-right">R-Mult</th>
+<th class="py-space-sm px-space-xs font-semibold">Setup / Strategy</th>
+<th class="py-space-sm px-space-xs font-semibold">Session Context</th>
+<th class="py-space-sm px-space-xs font-semibold">Mindset & Notes</th>
+<th class="py-space-sm px-space-xs font-semibold text-center">Rules</th>
+<th class="py-space-sm px-space-xs font-semibold">Source</th>
+<th class="py-space-sm pr-space-md pl-space-xs text-right font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0">
+<!-- Row 1: XAUUSD Winner -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs whitespace-nowrap font-data-mono text-data-mono text-on-surface">
+              Oct 26, 2024 <span class="text-on-surface-variant/70">09:14</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface font-data-mono">
+<span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+<span>XAUUSD</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded font-label-caps text-label-caps font-semibold bg-secondary/15 text-secondary">BUY</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface">
+              2.00 Lots
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              2,735.40
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              2,748.20
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +$1,280.00
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +2.40 R
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">FVG Breakout</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-on-surface-variant font-body-sm text-body-sm">
+              NY Open • <span class="text-on-surface">Clean HL</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[11px]">Calm / Patient</span>
+<span class="material-symbols-outlined text-body-md text-primary" title="Screenshot Attached">image</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps font-semibold">100% PASS</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap font-data-mono text-[11px] text-on-surface-variant">
+              MT5 <span class="text-primary hover:underline cursor-pointer">#981244</span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs whitespace-nowrap text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" title="Trade Options">
+<span class="material-symbols-outlined text-body-lg">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: NAS100 Loss with Mistake Tag -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs whitespace-nowrap font-data-mono text-data-mono text-on-surface">
+              Oct 25, 2024 <span class="text-on-surface-variant/70">15:32</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface font-data-mono">
+<span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+<span>NAS100</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded font-label-caps text-label-caps font-semibold bg-error/15 text-error">SELL</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface">
+              4.00 Lots
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              20,410.80
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              20,495.20
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-error">
+              -$844.00
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-error">
+              -1.00 R
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">Liq Sweep</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-on-surface-variant font-body-sm text-body-sm">
+              NY Close • Rejection
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-error/15 text-error text-[11px] font-semibold">FOMO Chased</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-error/15 text-error font-label-caps text-label-caps font-semibold">VIOLATED</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap font-data-mono text-[11px] text-on-surface-variant">
+              MT5 <span class="text-primary hover:underline cursor-pointer">#980918</span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs whitespace-nowrap text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" title="Trade Options">
+<span class="material-symbols-outlined text-body-lg">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: EURUSD Winner (London) -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs whitespace-nowrap font-data-mono text-data-mono text-on-surface">
+              Oct 25, 2024 <span class="text-on-surface-variant/70">08:05</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface font-data-mono">
+<span class="w-2 h-2 rounded-full bg-blue-400"></span>
+<span>EURUSD</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded font-label-caps text-label-caps font-semibold bg-secondary/15 text-secondary">BUY</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface">
+              10.00 Lots
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              1.08142
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              1.08415
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +$2,730.00
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +3.20 R
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">OTE 62% Pullback</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-on-surface-variant font-body-sm text-body-sm">
+              London Open • Judas Swing
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[11px]">Disciplined</span>
+<span class="material-symbols-outlined text-body-md text-primary" title="Screenshot Attached">image</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps font-semibold">100% PASS</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap font-data-mono text-[11px] text-on-surface-variant">
+              MT5 <span class="text-primary hover:underline cursor-pointer">#980410</span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs whitespace-nowrap text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" title="Trade Options">
+<span class="material-symbols-outlined text-body-lg">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: GBPUSD Mistake: Early Exit -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs whitespace-nowrap font-data-mono text-data-mono text-on-surface">
+              Oct 24, 2024 <span class="text-on-surface-variant/70">10:45</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface font-data-mono">
+<span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+<span>GBPUSD</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded font-label-caps text-label-caps font-semibold bg-secondary/15 text-secondary">BUY</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface">
+              6.50 Lots
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              1.29850
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              1.29965
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +$747.50
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +0.85 R
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">FVG Breakout</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-on-surface-variant font-body-sm text-body-sm">
+              NY Open • News Spill
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-yellow-400/15 text-yellow-300 text-[11px] font-semibold">Early Exit</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-yellow-400/15 text-yellow-300 font-label-caps text-label-caps font-semibold">PARTIAL</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap font-data-mono text-[11px] text-on-surface-variant">
+              MT5 <span class="text-primary hover:underline cursor-pointer">#979851</span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs whitespace-nowrap text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" title="Trade Options">
+<span class="material-symbols-outlined text-body-lg">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: XAUUSD Mistake: Held Past TP -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs whitespace-nowrap font-data-mono text-data-mono text-on-surface">
+              Oct 23, 2024 <span class="text-on-surface-variant/70">14:18</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface font-data-mono">
+<span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+<span>XAUUSD</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded font-label-caps text-label-caps font-semibold bg-error/15 text-error">SELL</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface">
+              2.00 Lots
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              2,741.00
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              2,744.50
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-error">
+              -$700.00
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-error">
+              -1.00 R
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">Liq Sweep</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-on-surface-variant font-body-sm text-body-sm">
+              NY Session • Double Top
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-error/15 text-error text-[11px] font-semibold">Held Past TP</span>
+<span class="material-symbols-outlined text-body-md text-primary" title="Screenshot Attached">image</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-error/15 text-error font-label-caps text-label-caps font-semibold">VIOLATED</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap font-data-mono text-[11px] text-on-surface-variant">
+              MT5 <span class="text-primary hover:underline cursor-pointer">#979002</span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs whitespace-nowrap text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" title="Trade Options">
+<span class="material-symbols-outlined text-body-lg">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: NAS100 Big Winner -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs whitespace-nowrap font-data-mono text-data-mono text-on-surface">
+              Oct 22, 2024 <span class="text-on-surface-variant/70">11:02</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface font-data-mono">
+<span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+<span>NAS100</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded font-label-caps text-label-caps font-semibold bg-secondary/15 text-secondary">BUY</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface">
+              3.00 Lots
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              20,290.00
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              20,388.50
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +$1,773.00
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +2.80 R
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">Killzone Scalp</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-on-surface-variant font-body-sm text-body-sm">
+              NY Open • Breaker Block
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[11px]">Flawless Read</span>
+<span class="material-symbols-outlined text-body-md text-primary" title="Screenshot Attached">image</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps font-semibold">100% PASS</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap font-data-mono text-[11px] text-on-surface-variant">
+              MT5 <span class="text-primary hover:underline cursor-pointer">#978119</span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs whitespace-nowrap text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" title="Trade Options">
+<span class="material-symbols-outlined text-body-lg">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 7: EURUSD Clean Loss -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs whitespace-nowrap font-data-mono text-data-mono text-on-surface">
+              Oct 21, 2024 <span class="text-on-surface-variant/70">04:30</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface font-data-mono">
+<span class="w-2 h-2 rounded-full bg-blue-400"></span>
+<span>EURUSD</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded font-label-caps text-label-caps font-semibold bg-error/15 text-error">SELL</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface">
+              8.00 Lots
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              1.08620
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              1.08715
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-error">
+              -$760.00
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-error">
+              -1.00 R
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">Liq Sweep</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-on-surface-variant font-body-sm text-body-sm">
+              Asia Close • Low Vol
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[11px]">Valid Stopout</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps font-semibold">100% PASS</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap font-data-mono text-[11px] text-on-surface-variant">
+              MT5 <span class="text-primary hover:underline cursor-pointer">#977603</span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs whitespace-nowrap text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" title="Trade Options">
+<span class="material-symbols-outlined text-body-lg">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 8: GBPUSD London Breakout -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs whitespace-nowrap font-data-mono text-data-mono text-on-surface">
+              Oct 19, 2024 <span class="text-on-surface-variant/70">08:42</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5 font-semibold text-on-surface font-data-mono">
+<span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+<span>GBPUSD</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded font-label-caps text-label-caps font-semibold bg-secondary/15 text-secondary">BUY</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface">
+              5.00 Lots
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              1.29410
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono text-on-surface-variant">
+              1.29684
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +$1,370.00
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-right font-data-mono text-data-mono font-semibold text-secondary">
+              +1.90 R
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-body-sm text-body-sm">FVG Breakout</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-on-surface-variant font-body-sm text-body-sm">
+              London • Momentum Continuation
+            </td>
+<td class="py-space-sm px-space-xs whitespace-nowrap">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[11px]">Centered</span>
+<span class="material-symbols-outlined text-body-md text-primary" title="Screenshot Attached">image</span>
+</div>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap text-center">
+<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary font-label-caps text-label-caps font-semibold">100% PASS</span>
+</td>
+<td class="py-space-sm px-space-xs whitespace-nowrap font-data-mono text-[11px] text-on-surface-variant">
+              MT5 <span class="text-primary hover:underline cursor-pointer">#976991</span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-xs whitespace-nowrap text-right">
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-colors" title="Trade Options">
+<span class="material-symbols-outlined text-body-lg">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Production Pagination & Status Bar -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+<span>Showing <strong class="text-on-surface font-semibold font-data-mono">1-10</strong> of <strong class="text-on-surface font-semibold font-data-mono">70</strong> trades</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Page <strong class="text-on-surface font-semibold font-data-mono">1</strong> of <strong class="text-on-surface font-semibold font-data-mono">7</strong></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant opacity-50 cursor-not-allowed font-body-sm text-body-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-body-md">chevron_left</span>
+<span>Previous</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-data-mono text-data-mono font-semibold flex items-center justify-center shadow-sm" type="button">
+          1
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-data-mono text-data-mono transition-colors" type="button">
+          2
+        </button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-data-mono text-data-mono transition-colors" type="button">
+          3
+        </button>
+<span class="text-on-surface-variant px-1 font-data-mono">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-data-mono text-data-mono transition-colors" type="button">
+          7
+        </button>
+<button class="px-space-md h-8 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-body-sm text-body-sm flex items-center gap-1 transition-colors" type="button">
+<span>Next</span>
+<span class="material-symbols-outlined text-body-md">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- VISUAL CARD VIEW (Toggleable Alternate Layout) -->
+<div class="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-space-md" id="cardViewWrapper">
+<!-- Card 1 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between group hover:bg-surface-container-high/50 transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs font-data-mono font-semibold text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+<span>XAUUSD</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary/15 text-secondary font-semibold">BUY</span>
+</div>
+<span class="font-data-mono text-data-mono font-semibold text-secondary">+$1,280.00</span>
+</div>
+<div class="relative w-full h-32 rounded-lg bg-surface-container-lowest overflow-hidden mb-space-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High contrast dark mode candlestick chart of gold XAUUSD showing fair value gap breakout with entry trigger and target projection lines glowing in green and purple on institutional terminal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwA9GPxOqV970Qr2R7StDzmYFF5qiqO3ySuNNljRtjca3hU0jY5SEaUDtj7w8VNcyjAq-Zwk18GJSHfGeSd6cWVxjM08LuPcor9XkMYRYzOSu6sC4CC1xeGQffbFaB1wQpwGJsV2yRRqcsbwHJ_qLgY6-p2eKbVv-8TUK3QPeVK5LkDG2dgda3-K1QXkskQnBb-xWt1pA4xv3IZ6dKiS_dhF0UaLaMAzkNJ5P3zSpGMKY6dEoL8l4e"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-space-xs">
+<span class="font-data-mono text-[11px] text-on-surface-variant">2,735.40 → 2,748.20</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Setup: <strong class="text-on-surface">FVG Breakout</strong></span>
+<span class="text-secondary font-data-mono font-semibold">+2.40 R</span>
+</div>
+<div class="text-[12px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm text-secondary">task_alt</span>
+<span>Plan Execution: 100% Rules Followed</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-[11px] font-data-mono text-on-surface-variant">
+<span>Oct 26, 09:14</span>
+<span class="text-primary hover:underline cursor-pointer">Deal #981244</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between group hover:bg-surface-container-high/50 transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs font-data-mono font-semibold text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+<span>NAS100</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-error/15 text-error font-semibold">SELL</span>
+</div>
+<span class="font-data-mono text-data-mono font-semibold text-error">-$844.00</span>
+</div>
+<div class="relative w-full h-32 rounded-lg bg-surface-container-lowest overflow-hidden mb-space-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Dark aesthetic electronic trading chart for Nasdaq 100 NAS100 index with stop loss line triggered in red, displaying volume spikes and failed liquidity sweep pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4cFy_o1a6XqemmI6acfJ_bRRJOIzrnITBhYKXrgHVv4PEYSXLHtW_hB4qQlMiCeLcnttrgBHfQ1hVPz219-fBOPkaZXuHx7Kh5HG8-fBNmqsIrryY9EUbXjWZ2uAZU5BO8HH3O_z9mbycpNpPQtlpzc9VJAiHqZbSdh4y2JXBPwtiQIpNYyX5rqbYL9HBdnjEjsVCfR6eqp3cBtuAWuSjOGVlAq7WHG4CjP70-VLg2HkhqK-VKHsp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-space-xs">
+<span class="font-data-mono text-[11px] text-error font-semibold">Mistake: FOMO Chased</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Setup: <strong class="text-on-surface">Liq Sweep</strong></span>
+<span class="text-error font-data-mono font-semibold">-1.00 R</span>
+</div>
+<div class="text-[12px] text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm text-error">warning</span>
+<span>Entered after impulse candle</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-[11px] font-data-mono text-on-surface-variant">
+<span>Oct 25, 15:32</span>
+<span class="text-primary hover:underline cursor-pointer">Deal #980918</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between group hover:bg-surface-container-high/50 transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs font-data-mono font-semibold text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-blue-400"></span>
+<span>EURUSD</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary/15 text-secondary font-semibold">BUY</span>
+</div>
+<span class="font-data-mono text-data-mono font-semibold text-secondary">+$2,730.00</span>
+</div>
+<div class="relative w-full h-32 rounded-lg bg-surface-container-lowest overflow-hidden mb-space-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Technical trading software screenshot EURUSD showing Fibonacci 62 percent retracement zone marked with clean trendlines and breakout bars under dark mode terminal lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd7mqhepCsz7RDJHmw-xv1gkf9V2V3xSEQXrFnU4OoZ5RGANrzWYsRFBzbMzlJN5C0KDrtcvR6Gcz6j9dMKKfTv_IFN9_b5-icp1aG5LMBlfOvfIqOnaCx_x5gVJw2oypZ_fZ-KNw9uT8EQalFrBSBQKESesmJjJ8uXcOhWJCVJfXXDRW06f5hM5lopRAUlGngv4nGX3Muyc-88y049FDgaIIYkrb8-K4mg_SB1rD7ikyCFpLlUqVC"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-space-xs">
+<span class="font-data-mono text-[11px] text-on-surface-variant">London Judas Swing</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Setup: <strong class="text-on-surface">OTE 62%</strong></span>
+<span class="text-secondary font-data-mono font-semibold">+3.20 R</span>
+</div>
+<div class="text-[12px] text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm text-secondary">verified</span>
+<span>Disciplined execution</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-[11px] font-data-mono text-on-surface-variant">
+<span>Oct 25, 08:05</span>
+<span class="text-primary hover:underline cursor-pointer">Deal #980410</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md flex flex-col justify-between group hover:bg-surface-container-high/50 transition-all">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs font-data-mono font-semibold text-on-surface">
+<span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
+<span>GBPUSD</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary/15 text-secondary font-semibold">BUY</span>
+</div>
+<span class="font-data-mono text-data-mono font-semibold text-secondary">+$1,370.00</span>
+</div>
+<div class="relative w-full h-32 rounded-lg bg-surface-container-lowest overflow-hidden mb-space-sm group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Institutional quantitative trading multi-timeframe chart of British Pound GBPUSD breakout with dynamic order block highlights and green take profit target hit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2RGsnfQ8q9G4pNJc0oBWGh7gIyQkvnmW-MIl8ujkmzIRSyUm_ySwu4NnPFr0I3In8x_tpSQ_zU6AofBS5xHOQoeYG7E17lgrwmBAV72JnO8y0VtKOusqaDZH_S0c_78wOPrOnzlrqz9kNpbZoU8RdLwlt62l3yOixywyc5tddLEyuS-jSxgRjMY6P1Qiahu6Xkm3Xsfel1diYoedZ0--jajNz1dXinBOuhFetuFBgnTyIW2dYWsB6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-transparent flex items-end p-space-xs">
+<span class="font-data-mono text-[11px] text-on-surface-variant">London Open Momentum</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Setup: <strong class="text-on-surface">FVG Breakout</strong></span>
+<span class="text-secondary font-data-mono font-semibold">+1.90 R</span>
+</div>
+<div class="text-[12px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm text-primary">psychology</span>
+<span>Centered psychological state</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between text-[11px] font-data-mono text-on-surface-variant">
+<span>Oct 19, 08:42</span>
+<span class="text-primary hover:underline cursor-pointer">Deal #976991</span>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script for Views & Filtering UX -->
+<script>
+    (function initJournalView() {
+      const viewTable = document.getElementById('tableViewWrapper');
+      const viewCards = document.getElementById('cardViewWrapper');
+      const btnTable = document.getElementById('viewBtnTable');
+      const btnCards = document.getElementById('viewBtnCards');
+      const searchInput = document.getElementById('journalSearchInput');
+
+      if (btnTable && btnCards && viewTable && viewCards) {
+        btnTable.addEventListener('click', function() {
+          viewTable.classList.remove('hidden');
+          viewCards.classList.add('hidden');
+          viewCards.classList.remove('grid');
+
+          btnTable.className = "px-space-md py-1 rounded bg-surface-container-high text-primary font-body-sm text-body-sm font-semibold flex items-center gap-space-xs transition-colors shadow-sm";
+          btnCards.className = "px-space-md py-1 rounded text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm flex items-center gap-space-xs transition-colors";
+        });
+
+        btnCards.addEventListener('click', function() {
+          viewTable.classList.add('hidden');
+          viewCards.classList.remove('hidden');
+          viewCards.classList.add('grid');
+
+          btnCards.className = "px-space-md py-1 rounded bg-surface-container-high text-primary font-body-sm text-body-sm font-semibold flex items-center gap-space-xs transition-colors shadow-sm";
+          btnTable.className = "px-space-md py-1 rounded text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm flex items-center gap-space-xs transition-colors";
+        });
+      }
+
+      // Keyboard shortcut '/' to focus search input
+      window.addEventListener('keydown', function(e) {
+        if (e.key === '/' && document.activeElement !== searchInput) {
+          e.preventDefault();
+          if (searchInput) searchInput.focus();
+        }
+      });
+    })();
+  </script>
+</div></main></div></body></html>
